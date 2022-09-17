@@ -1,0 +1,57 @@
+
+
+body{
+    background-image: url('../WAD/img/showcase.jpg');
+    background-size: cover;
+    
+
+}
+
+.new-container1 {
+    margin: auto;
+    width: 500px;
+    overflow: auto;
+    padding: 3rem 2rem;
+    margin-top: 16%;
+
+}
+
+#my-form1 {
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+#my-form1 label {
+    display: block;
+}
+
+#my-form1 input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+.btn1{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.btn1:hover {
+    background: #444;
+}
+@media(max-width:600px){
+    .body{
+        width: 100%;
+        float: none;
+    }
+}
+
