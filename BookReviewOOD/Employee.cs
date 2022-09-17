@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookReviews
+{
+    public class Employee: Person 
+    {
+        private int BSN;
+        private string role;
+
+      
+
+        public Employee(int id, string name, string password, int BSN, string role) : base(id, name, password)
+        {
+            this.BSN = BSN;
+            this.role = role;
+        }
+
+        public int BSN1 { get { return BSN;  } }
+        public string Role { get { return role; } }
+
+        public override string Info()
+        {
+            return $"My id is {base.ID}, my name is {base.Name}  and my role is {role} ";
+        }
+
+
+    }
+}
+
