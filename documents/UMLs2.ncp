@@ -1,0 +1,250 @@
+<Project>
+  <Name>project</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>BooksReviews</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Books</Name>
+        <Access>Public</Access>
+        <Location left="205" top="53" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private string Title</Member>
+        <Member type="Field">private string Author</Member>
+        <Member type="Field">private string Description</Member>
+        <Member type="Field">private string type</Member>
+        <Member type="Constructor">public Books()</Member>
+        <Member type="Property">public int id { get; set; }</Member>
+        <Member type="Property">public string title { get; set; }</Member>
+        <Member type="Property">public string author { get; set; }</Member>
+        <Member type="Property">public string description { get; set; }</Member>
+        <Member type="Property">public string type { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>review</Name>
+        <Access>Public</Access>
+        <Location left="205" top="413" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string title</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Field">int dateTime</Member>
+        <Member type="Constructor">public review()</Member>
+        <Member type="Property">public int id { get; set; }</Member>
+        <Member type="Property">public string title { get; set; }</Member>
+        <Member type="Property">public string description { get; set; }</Member>
+        <Member type="Property">public string dateTime { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Person</Name>
+        <Access>Public</Access>
+        <Location left="752" top="44" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">private ing id</Member>
+        <Member type="Field">private int password</Member>
+        <Member type="Constructor">public Person()</Member>
+        <Member type="Property">public int id { get; set; }</Member>
+        <Member type="Property">public string name { get; set; }</Member>
+        <Member type="Method">public string login()</Member>
+        <Member type="Method">public virtual void ToString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="862" top="370" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int expirationDate</Member>
+        <Member type="Constructor">public User()</Member>
+        <Member type="Property">public int expiration { get; set; }</Member>
+        <Member type="Method">public override void ToString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Employee</Name>
+        <Access>Public</Access>
+        <Location left="649" top="370" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int BSN</Member>
+        <Member type="Field">private string role</Member>
+        <Member type="Constructor">public Employee()</Member>
+        <Member type="Property">public int BSN1 { get; set; }</Member>
+        <Member type="Method">public override void ToString()</Member>
+        <Member type="Property">public string role { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Generalization" first="3" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>730</X>
+          <Y>342</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>832</X>
+          <Y>289</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <Label>get_reviews</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>219</X>
+          <Y>356</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>219</X>
+          <Y>388</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <Label>add_review</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>952</X>
+          <Y>659</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>284</X>
+          <Y>673</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="0">
+        <Label>add_book</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>607</X>
+          <Y>394</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>331</X>
+          <Y>353</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.2, Culture=neutral, PublicKeyToken=null">
+    <Name>mission</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Astronaut</Name>
+        <Access>Public</Access>
+        <Location left="121" top="378" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">private string gender</Member>
+        <Member type="Field">private string nationality</Member>
+        <Member type="Constructor">public Astronaut()</Member>
+        <Member type="Property">public string name { get; set; }</Member>
+        <Member type="Property">public string gender { get; set; }</Member>
+        <Member type="Property">public string nationality { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Mission</Name>
+        <Access>Public</Access>
+        <Location left="411" top="378" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">private int launchDate</Member>
+        <Member type="Field">private int returnDate</Member>
+        <Member type="Field">private string spaceship</Member>
+        <Member type="Constructor">public Mission()</Member>
+        <Member type="Property">public string name { get; set; }</Member>
+        <Member type="Property">public int launchDate { get; set; }</Member>
+        <Member type="Property">public int returnDate { get; set; }</Member>
+        <Member type="Property">public int spaceship { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ControMissions</Name>
+        <Access>Public</Access>
+        <Location left="274" top="28" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void addAstronaut()</Member>
+        <Member type="Method">public void addMission()</Member>
+        <Member type="Method">public void deleteAstronaut()</Member>
+        <Member type="Method">public void deleteMission()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>480</X>
+          <Y>86</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>480</X>
+          <Y>345</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>196</X>
+          <Y>174</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>191</X>
+          <Y>343</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="0">
+        <Label>*</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>386</X>
+          <Y>535</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <Label>*</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
