@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\BookReviewOOD\\BookReviews.csproj": {}
+    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\BookReviewOOD\\BookReviews.csproj": {}
   },
   "projects": {
-    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\BookReviewOOD\\BookReviews.csproj": {
+    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\BookReviewOOD\\BookReviews.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\BookReviewOOD\\BookReviews.csproj",
+        "projectUniqueName": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\BookReviewOOD\\BookReviews.csproj",
         "projectName": "BookReviews",
-        "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\BookReviewOOD\\BookReviews.csproj",
+        "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\BookReviewOOD\\BookReviews.csproj",
         "packagesPath": "C:\\Users\\delsh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\BookReviewOOD\\obj\\",
+        "outputPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\BookReviewOOD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

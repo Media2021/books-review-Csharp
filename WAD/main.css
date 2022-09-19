@@ -1,8 +1,8 @@
 
-
 .container{
     width: 80%;
     margin: auto;
+    
     overflow: hidden;
 
 
@@ -32,28 +32,29 @@
     padding-right: 15px;
 }
 #showcase{
-    background-image: url('../WAD/img/showcase.jpg');
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
     margin: auto;
     min-height: 480px;
+    padding-top: 10%;
+    
+}
+#showcase p {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
     
 }
 
 
-
-
-.pagination{
-    justify-content: center;
-
-    
-
+.key:hover {
+    background: #444;
 }
-.page-link{
-    color: black;
-    
-}
+
+
+
 #main-footer{
     
 
@@ -61,7 +62,8 @@
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 70px;
+
 }
 @media(max-width:600px){
     .body{
@@ -70,9 +72,7 @@
     }
 }
 
-.key:hover {
-    background: #444;
-}
+
 
 
 

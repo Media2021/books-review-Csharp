@@ -1,24 +1,84 @@
 
-body{
-    background-image: url('../WAD/img/showcase.jpg');
-    
-    background-size: cover;
+.body{
+
+    margin: auto;
     
 }
 
 
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    
+
+
+
+}
+#main-header{
+    background-color: coral;
+    color: #fff;
+    text-align: center;
+    height: 70px;
+    display: flex;
+}
+#navbar{
+    background-color: #333;
+
+
+    color: white;
+}
+#navbar ul{
+    padding: 0;
+    list-style: none;
+}
+#navbar li{
+    display: inline;
+}
+#navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+
+#main-footer{
+    
+
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+#showcase{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    margin: auto;
+    min-height: 480px;
+    
+}
+
 
 .new-container {
+
     margin: auto;
     width: 500px;
-    overflow: auto;
-    padding: 3rem 2rem;
-    margin-top: 18%;
+    overflow: auto;  
 }
 
 #my-form {
     padding: 2rem;
-    background: #f4f4f4;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    
 }
 
 #my-form label {
@@ -46,7 +106,8 @@ body{
     margin: 5px 0;
 }
 .btn1:hover {
-    background: #444;
+    background: coral;
+
 }
 
 .btn2{
@@ -60,7 +121,8 @@ body{
     margin: 5px 0;
 }
 .btn2:hover {
-    background: #444;
+    background: coral;
+
 }
 .btn2 a{
     color: white;
