@@ -116,10 +116,42 @@
     margin: 5px 0;
 }
 .btn1:hover {
-    background: coral;
-
-    
+    background: coral;  
 }
+
+.table{
+
+    background: #333;
+
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px black solid;
+    border-radius: 1em;
+    padding-top: 1%;
+    margin-top: 3%;
+    height: 50px;
+    border-collapse: collapse;
+}
+th {
+    color: white;
+    border-collapse: collapse;
+
+}
+
+td, th {
+
+    text-align: left;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: coral;
+}
+tr:nth-child(odd) {
+    color: white;
+}
+
+
 @media(max-width:600px){
     .body{
         width: 100%;
