@@ -14,6 +14,7 @@ namespace BookReviews
     {
         User loggeduser;
         List<Books> addBooks = new List<Books>();
+        List<Review> reviews = new List<Review>();
         public ReviewsUser(User loggedUser)
         {
             InitializeComponent();
@@ -35,10 +36,31 @@ namespace BookReviews
 
         private void button_AddView_Click(object sender, EventArgs e)
         {
-            Books selectedBooks = addBooks[0];
+            if (tb_reviewId.Text !=""&& tb_bookName.Text !=""&& tb_userName.Text !="")
+            {
+                int getId = Convert.ToInt32(tb_reviewId.Text.GetHashCode());                         
+                string getBookName = tb_bookName.Text;
+                Books bookFind = addBooks.Find(x => x.Title == getBookName);
+                string getReview = richTb_AddView.Text;
 
-            Review review = new Review(100,"asdas","adasd",loggeduser,DateTime.Now);
-            selectedBooks.Reviews.Add(review);
+                string getUserName = tb_userName.Text;
+                tb_userName.Text = Convert.ToString( loggeduser.Name);
+                string getDate = dateTimePicker1.Text;
+
+                Review addReview = new Review(getId, getBookName, getReview, getUserName, getDate);
+                reviews.Add(addReview);
+
+                MessageBox.Show("data has been saved");
+
+
+            }
+            else
+            {
+                MessageBox.Show("fields can not be empty");
+            }
+
+
+           
 
 
         }
@@ -49,21 +71,12 @@ namespace BookReviews
 
         private void richTb_search_TextChanged(object sender, EventArgs e)
         {
-            List<Books> books = new List<Books>();
-             listB_findBook.Items.Clear();
-            foreach (var item in books)
-            {
-               
-                listB_findBook.Items.Add(item);
-            }
+         
         }
 
         private void tb_refresh_TextChanged(object sender, EventArgs e)
         {
-            
-           richTb_search.Clear();   
-            richTb_AddView.Clear();
-            listB_findBook.Items.Clear();
+           
         }
 
         private void richTb_bookInfo_TextChanged(object sender, EventArgs e)
@@ -73,18 +86,16 @@ namespace BookReviews
 
         private void button_deleteReview_Click(object sender, EventArgs e)
         {
-            int  cell = listB_findBook.SelectedIndex;
-           
-           
-
-
-      
-
+          
         }
-
-        private void listB_findBook_SelectedIndexChanged(object sender, EventArgs e)
+        public void DGV()
         {
+            foreach (var item in reviews)
+            {
 
+                dataGridView1.Rows.Add(item);
+            }
         }
+
     }
 }

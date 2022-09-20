@@ -48,13 +48,14 @@
             this.btn_logout1 = new System.Windows.Forms.Button();
             this.comboB_role = new System.Windows.Forms.ComboBox();
             this.lbl_override = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_empId
             // 
             this.lbl_empId.AutoSize = true;
-            this.lbl_empId.Location = new System.Drawing.Point(128, 438);
+            this.lbl_empId.Location = new System.Drawing.Point(128, 273);
             this.lbl_empId.Name = "lbl_empId";
             this.lbl_empId.Size = new System.Drawing.Size(216, 48);
             this.lbl_empId.TabIndex = 66;
@@ -62,7 +63,7 @@
             // 
             // tb_EMPId
             // 
-            this.tb_EMPId.Location = new System.Drawing.Point(450, 431);
+            this.tb_EMPId.Location = new System.Drawing.Point(450, 266);
             this.tb_EMPId.Name = "tb_EMPId";
             this.tb_EMPId.Size = new System.Drawing.Size(300, 55);
             this.tb_EMPId.TabIndex = 65;
@@ -89,7 +90,7 @@
             // lblBookType
             // 
             this.lblBookType.AutoSize = true;
-            this.lblBookType.Location = new System.Drawing.Point(128, 776);
+            this.lblBookType.Location = new System.Drawing.Point(128, 611);
             this.lblBookType.Name = "lblBookType";
             this.lblBookType.Size = new System.Drawing.Size(87, 48);
             this.lblBookType.TabIndex = 60;
@@ -98,7 +99,7 @@
             // lblBookAuthor
             // 
             this.lblBookAuthor.AutoSize = true;
-            this.lblBookAuthor.Location = new System.Drawing.Point(128, 660);
+            this.lblBookAuthor.Location = new System.Drawing.Point(128, 495);
             this.lblBookAuthor.Name = "lblBookAuthor";
             this.lblBookAuthor.Size = new System.Drawing.Size(170, 48);
             this.lblBookAuthor.TabIndex = 59;
@@ -107,7 +108,7 @@
             // lblBookName
             // 
             this.lblBookName.AutoSize = true;
-            this.lblBookName.Location = new System.Drawing.Point(128, 557);
+            this.lblBookName.Location = new System.Drawing.Point(128, 392);
             this.lblBookName.Name = "lblBookName";
             this.lblBookName.Size = new System.Drawing.Size(108, 48);
             this.lblBookName.TabIndex = 58;
@@ -115,14 +116,14 @@
             // 
             // tb_empPassword
             // 
-            this.tb_empPassword.Location = new System.Drawing.Point(450, 660);
+            this.tb_empPassword.Location = new System.Drawing.Point(450, 495);
             this.tb_empPassword.Name = "tb_empPassword";
             this.tb_empPassword.Size = new System.Drawing.Size(300, 55);
             this.tb_empPassword.TabIndex = 55;
             // 
             // tb_empName
             // 
-            this.tb_empName.Location = new System.Drawing.Point(450, 550);
+            this.tb_empName.Location = new System.Drawing.Point(450, 385);
             this.tb_empName.Name = "tb_empName";
             this.tb_empName.Size = new System.Drawing.Size(300, 55);
             this.tb_empName.TabIndex = 54;
@@ -150,7 +151,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 123;
             this.dataGridView1.RowTemplate.Height = 57;
-            this.dataGridView1.Size = new System.Drawing.Size(1633, 450);
+            this.dataGridView1.Size = new System.Drawing.Size(1620, 450);
             this.dataGridView1.TabIndex = 52;
             // 
             // Column5
@@ -190,7 +191,7 @@
             // 
             // tb_bsn
             // 
-            this.tb_bsn.Location = new System.Drawing.Point(450, 785);
+            this.tb_bsn.Location = new System.Drawing.Point(450, 620);
             this.tb_bsn.Name = "tb_bsn";
             this.tb_bsn.Size = new System.Drawing.Size(300, 55);
             this.tb_bsn.TabIndex = 67;
@@ -211,7 +212,7 @@
             this.comboB_role.Items.AddRange(new object[] {
             "Admin",
             "Employee"});
-            this.comboB_role.Location = new System.Drawing.Point(387, 325);
+            this.comboB_role.Location = new System.Drawing.Point(387, 750);
             this.comboB_role.Name = "comboB_role";
             this.comboB_role.Size = new System.Drawing.Size(363, 56);
             this.comboB_role.TabIndex = 69;
@@ -224,11 +225,21 @@
             this.lbl_override.Size = new System.Drawing.Size(0, 48);
             this.lbl_override.TabIndex = 70;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(128, 750);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 48);
+            this.label2.TabIndex = 71;
+            this.label2.Text = "Role";
+            // 
             // AdminControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 48F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2663, 1121);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_override);
             this.Controls.Add(this.comboB_role);
             this.Controls.Add(this.btn_logout1);
@@ -274,5 +285,6 @@
         private ComboBox comboB_role;
         private DataGridViewTextBoxColumn Column1;
         private Label lbl_override;
+        private Label label2;
     }
 }

@@ -49,6 +49,7 @@ namespace BookReviews
                 tb_empName.Clear();
                 tb_empPassword.Clear();
                 tb_bsn.Clear();
+                
             }
 
             else
@@ -63,7 +64,7 @@ namespace BookReviews
 
             foreach (var employee in EmployeesList)
             {
-                dataGridView1.Rows.Add(employee.ID,employee.Name, employee.BSN1,employee.Role);
+                dataGridView1.Rows.Add(employee.ID,employee.Name,employee.Password, employee.BSN1, employee.Role);
             }
         }
 
