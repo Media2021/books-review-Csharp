@@ -31,8 +31,6 @@
             this.btnDeleteBook = new System.Windows.Forms.Button();
             this.lblDescription = new System.Windows.Forms.Label();
             this.lblBookType = new System.Windows.Forms.Label();
-            this.lblBookAuthor = new System.Windows.Forms.Label();
-            this.lblBookName = new System.Windows.Forms.Label();
             this.richTbDescription = new System.Windows.Forms.RichTextBox();
             this.comboBoxBookType = new System.Windows.Forms.ComboBox();
             this.tbBookAuthor = new System.Windows.Forms.TextBox();
@@ -45,7 +43,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblBookId = new System.Windows.Forms.Label();
             this.tbBookId = new System.Windows.Forms.TextBox();
             this.btn_loguot = new System.Windows.Forms.Button();
             this.lbl_override = new System.Windows.Forms.Label();
@@ -79,24 +76,6 @@
             this.lblBookType.TabIndex = 45;
             this.lblBookType.Text = "Book Type";
             // 
-            // lblBookAuthor
-            // 
-            this.lblBookAuthor.AutoSize = true;
-            this.lblBookAuthor.Location = new System.Drawing.Point(181, 412);
-            this.lblBookAuthor.Name = "lblBookAuthor";
-            this.lblBookAuthor.Size = new System.Drawing.Size(215, 48);
-            this.lblBookAuthor.TabIndex = 44;
-            this.lblBookAuthor.Text = "Book author";
-            // 
-            // lblBookName
-            // 
-            this.lblBookName.AutoSize = true;
-            this.lblBookName.Location = new System.Drawing.Point(181, 309);
-            this.lblBookName.Name = "lblBookName";
-            this.lblBookName.Size = new System.Drawing.Size(199, 48);
-            this.lblBookName.TabIndex = 43;
-            this.lblBookName.Text = "Book name";
-            // 
             // richTbDescription
             // 
             this.richTbDescription.Location = new System.Drawing.Point(181, 709);
@@ -121,15 +100,19 @@
             // 
             this.tbBookAuthor.Location = new System.Drawing.Point(503, 412);
             this.tbBookAuthor.Name = "tbBookAuthor";
+            this.tbBookAuthor.PlaceholderText = "Author";
             this.tbBookAuthor.Size = new System.Drawing.Size(300, 55);
             this.tbBookAuthor.TabIndex = 40;
+            this.tbBookAuthor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbBookName
             // 
             this.tbBookName.Location = new System.Drawing.Point(503, 302);
             this.tbBookName.Name = "tbBookName";
+            this.tbBookName.PlaceholderText = "Book Name";
             this.tbBookName.Size = new System.Drawing.Size(300, 55);
             this.tbBookName.TabIndex = 39;
+            this.tbBookName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAddBook
             // 
@@ -202,21 +185,14 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Read To Heal";
             // 
-            // lblBookId
-            // 
-            this.lblBookId.AutoSize = true;
-            this.lblBookId.Location = new System.Drawing.Point(181, 190);
-            this.lblBookId.Name = "lblBookId";
-            this.lblBookId.Size = new System.Drawing.Size(141, 48);
-            this.lblBookId.TabIndex = 51;
-            this.lblBookId.Text = "Book id";
-            // 
             // tbBookId
             // 
             this.tbBookId.Location = new System.Drawing.Point(503, 183);
             this.tbBookId.Name = "tbBookId";
+            this.tbBookId.PlaceholderText = "Book ID";
             this.tbBookId.Size = new System.Drawing.Size(300, 55);
             this.tbBookId.TabIndex = 50;
+            this.tbBookId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_loguot
             // 
@@ -243,14 +219,11 @@
             this.ClientSize = new System.Drawing.Size(2722, 1249);
             this.Controls.Add(this.lbl_override);
             this.Controls.Add(this.btn_loguot);
-            this.Controls.Add(this.lblBookId);
             this.Controls.Add(this.tbBookId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeleteBook);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblBookType);
-            this.Controls.Add(this.lblBookAuthor);
-            this.Controls.Add(this.lblBookName);
             this.Controls.Add(this.richTbDescription);
             this.Controls.Add(this.comboBoxBookType);
             this.Controls.Add(this.tbBookAuthor);
@@ -270,8 +243,6 @@
         private Button btnDeleteBook;
         private Label lblDescription;
         private Label lblBookType;
-        private Label lblBookAuthor;
-        private Label lblBookName;
         private RichTextBox richTbDescription;
         private ComboBox comboBoxBookType;
         private TextBox tbBookAuthor;
@@ -279,7 +250,6 @@
         private Button btnAddBook;
         private DataGridView dataGridView1;
         private Label label1;
-        private Label lblBookId;
         private TextBox tbBookId;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;

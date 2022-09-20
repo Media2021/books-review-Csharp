@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_empId = new System.Windows.Forms.Label();
             this.tb_EMPId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_dtEMP = new System.Windows.Forms.Button();
-            this.lblBookType = new System.Windows.Forms.Label();
-            this.lblBookAuthor = new System.Windows.Forms.Label();
-            this.lblBookName = new System.Windows.Forms.Label();
             this.tb_empPassword = new System.Windows.Forms.TextBox();
             this.tb_empName = new System.Windows.Forms.TextBox();
             this.btn_addEMP = new System.Windows.Forms.Button();
@@ -52,21 +48,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_empId
-            // 
-            this.lbl_empId.AutoSize = true;
-            this.lbl_empId.Location = new System.Drawing.Point(128, 273);
-            this.lbl_empId.Name = "lbl_empId";
-            this.lbl_empId.Size = new System.Drawing.Size(216, 48);
-            this.lbl_empId.TabIndex = 66;
-            this.lbl_empId.Text = "employee id";
-            // 
             // tb_EMPId
             // 
             this.tb_EMPId.Location = new System.Drawing.Point(450, 266);
             this.tb_EMPId.Name = "tb_EMPId";
+            this.tb_EMPId.PlaceholderText = "Employee ID";
             this.tb_EMPId.Size = new System.Drawing.Size(300, 55);
             this.tb_EMPId.TabIndex = 65;
+            this.tb_EMPId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -88,46 +77,24 @@
             this.btn_dtEMP.UseVisualStyleBackColor = true;
             this.btn_dtEMP.Click += new System.EventHandler(this.btn_dtEMP_Click);
             // 
-            // lblBookType
-            // 
-            this.lblBookType.AutoSize = true;
-            this.lblBookType.Location = new System.Drawing.Point(128, 611);
-            this.lblBookType.Name = "lblBookType";
-            this.lblBookType.Size = new System.Drawing.Size(87, 48);
-            this.lblBookType.TabIndex = 60;
-            this.lblBookType.Text = "BSN";
-            // 
-            // lblBookAuthor
-            // 
-            this.lblBookAuthor.AutoSize = true;
-            this.lblBookAuthor.Location = new System.Drawing.Point(128, 495);
-            this.lblBookAuthor.Name = "lblBookAuthor";
-            this.lblBookAuthor.Size = new System.Drawing.Size(170, 48);
-            this.lblBookAuthor.TabIndex = 59;
-            this.lblBookAuthor.Text = "password";
-            // 
-            // lblBookName
-            // 
-            this.lblBookName.AutoSize = true;
-            this.lblBookName.Location = new System.Drawing.Point(128, 392);
-            this.lblBookName.Name = "lblBookName";
-            this.lblBookName.Size = new System.Drawing.Size(108, 48);
-            this.lblBookName.TabIndex = 58;
-            this.lblBookName.Text = "name";
-            // 
             // tb_empPassword
             // 
             this.tb_empPassword.Location = new System.Drawing.Point(450, 495);
             this.tb_empPassword.Name = "tb_empPassword";
+            this.tb_empPassword.PlaceholderText = "Password";
             this.tb_empPassword.Size = new System.Drawing.Size(300, 55);
             this.tb_empPassword.TabIndex = 55;
+            this.tb_empPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_empPassword.TextChanged += new System.EventHandler(this.tb_empPassword_TextChanged);
             // 
             // tb_empName
             // 
             this.tb_empName.Location = new System.Drawing.Point(450, 385);
             this.tb_empName.Name = "tb_empName";
+            this.tb_empName.PlaceholderText = "Name";
             this.tb_empName.Size = new System.Drawing.Size(300, 55);
             this.tb_empName.TabIndex = 54;
+            this.tb_empName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_addEMP
             // 
@@ -194,8 +161,10 @@
             // 
             this.tb_bsn.Location = new System.Drawing.Point(450, 620);
             this.tb_bsn.Name = "tb_bsn";
+            this.tb_bsn.PlaceholderText = "BSN";
             this.tb_bsn.Size = new System.Drawing.Size(300, 55);
             this.tb_bsn.TabIndex = 67;
+            this.tb_bsn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_logout1
             // 
@@ -245,13 +214,9 @@
             this.Controls.Add(this.comboB_role);
             this.Controls.Add(this.btn_logout1);
             this.Controls.Add(this.tb_bsn);
-            this.Controls.Add(this.lbl_empId);
             this.Controls.Add(this.tb_EMPId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_dtEMP);
-            this.Controls.Add(this.lblBookType);
-            this.Controls.Add(this.lblBookAuthor);
-            this.Controls.Add(this.lblBookName);
             this.Controls.Add(this.tb_empPassword);
             this.Controls.Add(this.tb_empName);
             this.Controls.Add(this.btn_addEMP);
@@ -266,14 +231,9 @@
         }
 
         #endregion
-
-        private Label lbl_empId;
         private TextBox tb_EMPId;
         private Label label1;
         private Button btn_dtEMP;
-        private Label lblBookType;
-        private Label lblBookAuthor;
-        private Label lblBookName;
         private TextBox tb_empPassword;
         private TextBox tb_empName;
         private Button btn_addEMP;

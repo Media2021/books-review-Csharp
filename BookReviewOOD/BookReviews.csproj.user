@@ -10,8 +10,5 @@
     <Compile Update="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ReviewsUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

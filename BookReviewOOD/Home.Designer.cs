@@ -138,35 +138,26 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.panel_signup = new System.Windows.Forms.Panel();
-            this.tb_userId1 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tb_Password1 = new System.Windows.Forms.TextBox();
-            this.tb_userName1 = new System.Windows.Forms.TextBox();
-            this.button_Signup2 = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.panel_signin = new System.Windows.Forms.Panel();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.tb_username = new System.Windows.Forms.TextBox();
             this.button_signin2 = new System.Windows.Forms.Button();
-            this.btn_signup1 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.tb_Search = new System.Windows.Forms.TextBox();
-            this.button_signup1 = new System.Windows.Forms.Button();
-            this.btn_Signin = new System.Windows.Forms.Button();
-            this.listB_AllInfoBook = new System.Windows.Forms.ListBox();
-            this.label27 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panelHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg_Books)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel_signup.SuspendLayout();
             this.panel_signin.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -994,112 +985,41 @@
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 0;
             // 
-            // panel_signup
-            // 
-            this.panel_signup.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel_signup.Controls.Add(this.tb_userId1);
-            this.panel_signup.Controls.Add(this.label21);
-            this.panel_signup.Controls.Add(this.tb_Password1);
-            this.panel_signup.Controls.Add(this.tb_userName1);
-            this.panel_signup.Controls.Add(this.button_Signup2);
-            this.panel_signup.Controls.Add(this.label22);
-            this.panel_signup.Controls.Add(this.label23);
-            this.panel_signup.Location = new System.Drawing.Point(1237, 643);
-            this.panel_signup.Name = "panel_signup";
-            this.panel_signup.Size = new System.Drawing.Size(704, 540);
-            this.panel_signup.TabIndex = 26;
-            this.panel_signup.Visible = false;
-            // 
-            // tb_userId1
-            // 
-            this.tb_userId1.Location = new System.Drawing.Point(343, 37);
-            this.tb_userId1.Name = "tb_userId1";
-            this.tb_userId1.Size = new System.Drawing.Size(300, 55);
-            this.tb_userId1.TabIndex = 13;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(52, 40);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(50, 48);
-            this.label21.TabIndex = 12;
-            this.label21.Text = "id";
-            // 
-            // tb_Password1
-            // 
-            this.tb_Password1.Location = new System.Drawing.Point(343, 139);
-            this.tb_Password1.Name = "tb_Password1";
-            this.tb_Password1.Size = new System.Drawing.Size(300, 55);
-            this.tb_Password1.TabIndex = 11;
-            // 
-            // tb_userName1
-            // 
-            this.tb_userName1.Location = new System.Drawing.Point(343, 264);
-            this.tb_userName1.Name = "tb_userName1";
-            this.tb_userName1.Size = new System.Drawing.Size(300, 55);
-            this.tb_userName1.TabIndex = 10;
-            // 
-            // button_Signup2
-            // 
-            this.button_Signup2.Location = new System.Drawing.Point(250, 426);
-            this.button_Signup2.Name = "button_Signup2";
-            this.button_Signup2.Size = new System.Drawing.Size(225, 69);
-            this.button_Signup2.TabIndex = 8;
-            this.button_Signup2.Text = "Sign up ";
-            this.button_Signup2.UseVisualStyleBackColor = true;
-            this.button_Signup2.Click += new System.EventHandler(this.button_Signup2_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(52, 142);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(170, 48);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "password";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(52, 267);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(185, 48);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "user name";
-            // 
             // panel_signin
             // 
-            this.panel_signin.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel_signin.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel_signin.Controls.Add(this.tb_password);
             this.panel_signin.Controls.Add(this.tb_username);
             this.panel_signin.Controls.Add(this.button_signin2);
-            this.panel_signin.Controls.Add(this.btn_signup1);
-            this.panel_signin.Controls.Add(this.label24);
-            this.panel_signin.Controls.Add(this.label25);
-            this.panel_signin.Location = new System.Drawing.Point(1468, 736);
+            this.panel_signin.Location = new System.Drawing.Point(175, 279);
             this.panel_signin.Name = "panel_signin";
             this.panel_signin.Size = new System.Drawing.Size(690, 344);
             this.panel_signin.TabIndex = 25;
-            this.panel_signin.Visible = false;
             // 
             // tb_password
             // 
-            this.tb_password.Location = new System.Drawing.Point(354, 129);
+            this.tb_password.BackColor = System.Drawing.Color.Coral;
+            this.tb_password.Location = new System.Drawing.Point(197, 149);
             this.tb_password.Name = "tb_password";
+            this.tb_password.PasswordChar = '*';
+            this.tb_password.PlaceholderText = "Enter password";
             this.tb_password.Size = new System.Drawing.Size(300, 55);
             this.tb_password.TabIndex = 5;
+            this.tb_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_username
             // 
-            this.tb_username.Location = new System.Drawing.Point(354, 20);
+            this.tb_username.BackColor = System.Drawing.Color.Coral;
+            this.tb_username.Location = new System.Drawing.Point(197, 41);
             this.tb_username.Name = "tb_username";
+            this.tb_username.PlaceholderText = "Enter username";
             this.tb_username.Size = new System.Drawing.Size(300, 55);
             this.tb_username.TabIndex = 4;
+            this.tb_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_signin2
             // 
-            this.button_signin2.Location = new System.Drawing.Point(429, 235);
+            this.button_signin2.Location = new System.Drawing.Point(237, 234);
             this.button_signin2.Name = "button_signin2";
             this.button_signin2.Size = new System.Drawing.Size(225, 69);
             this.button_signin2.TabIndex = 3;
@@ -1107,101 +1027,75 @@
             this.button_signin2.UseVisualStyleBackColor = true;
             this.button_signin2.Click += new System.EventHandler(this.button_signin2_Click);
             // 
-            // btn_signup1
-            // 
-            this.btn_signup1.Location = new System.Drawing.Point(63, 238);
-            this.btn_signup1.Name = "btn_signup1";
-            this.btn_signup1.Size = new System.Drawing.Size(225, 69);
-            this.btn_signup1.TabIndex = 2;
-            this.btn_signup1.Text = "Sign up ?";
-            this.btn_signup1.UseVisualStyleBackColor = true;
-            this.btn_signup1.Click += new System.EventHandler(this.btn_signup1_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(78, 129);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(170, 48);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "password";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(63, 23);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(185, 48);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "user name";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI Black", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(1151, 132);
+            this.label26.Location = new System.Drawing.Point(291, 120);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(455, 86);
             this.label26.TabIndex = 24;
             this.label26.Text = "Read To Heal";
             // 
-            // tb_Search
+            // panel3
             // 
-            this.tb_Search.Location = new System.Drawing.Point(600, 324);
-            this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(300, 55);
-            this.tb_Search.TabIndex = 20;
-            this.tb_Search.TextChanged += new System.EventHandler(this.tb_Search_TextChanged);
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Location = new System.Drawing.Point(12, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1061, 103);
+            this.panel3.TabIndex = 26;
             // 
-            // button_signup1
+            // panel7
             // 
-            this.button_signup1.Location = new System.Drawing.Point(647, 1011);
-            this.button_signup1.Name = "button_signup1";
-            this.button_signup1.Size = new System.Drawing.Size(279, 69);
-            this.button_signup1.TabIndex = 19;
-            this.button_signup1.Text = "Add review ?";
-            this.button_signup1.UseVisualStyleBackColor = true;
-            this.button_signup1.Click += new System.EventHandler(this.button_signup1_Click);
+            this.panel7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel7.Location = new System.Drawing.Point(8, 8);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1061, 103);
+            this.panel7.TabIndex = 27;
             // 
-            // btn_Signin
+            // panel4
             // 
-            this.btn_Signin.Location = new System.Drawing.Point(1674, 314);
-            this.btn_Signin.Name = "btn_Signin";
-            this.btn_Signin.Size = new System.Drawing.Size(339, 55);
-            this.btn_Signin.TabIndex = 18;
-            this.btn_Signin.Text = "Sign in";
-            this.btn_Signin.UseVisualStyleBackColor = true;
-            this.btn_Signin.Click += new System.EventHandler(this.btn_Signin_Click);
+            this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Location = new System.Drawing.Point(12, 120);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(116, 568);
+            this.panel4.TabIndex = 27;
             // 
-            // listB_AllInfoBook
+            // panel6
             // 
-            this.listB_AllInfoBook.FormattingEnabled = true;
-            this.listB_AllInfoBook.ItemHeight = 48;
-            this.listB_AllInfoBook.Location = new System.Drawing.Point(257, 426);
-            this.listB_AllInfoBook.Name = "listB_AllInfoBook";
-            this.listB_AllInfoBook.Size = new System.Drawing.Size(891, 436);
-            this.listB_AllInfoBook.TabIndex = 27;
+            this.panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel6.Location = new System.Drawing.Point(3, 572);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1061, 103);
+            this.panel6.TabIndex = 29;
             // 
-            // label27
+            // panel5
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(258, 327);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(217, 48);
-            this.label27.TabIndex = 28;
-            this.label27.Text = "Search book";
+            this.panel5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel5.Location = new System.Drawing.Point(957, 123);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(116, 563);
+            this.panel5.TabIndex = 28;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel8.Location = new System.Drawing.Point(12, 692);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1061, 103);
+            this.panel8.TabIndex = 29;
             // 
             // Home
             // 
-            this.ClientSize = new System.Drawing.Size(2755, 1269);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.listB_AllInfoBook);
-            this.Controls.Add(this.panel_signup);
+            this.ClientSize = new System.Drawing.Size(1085, 807);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_signin);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.button_signup1);
-            this.Controls.Add(this.btn_Signin);
             this.Name = "Home";
             this.Text = "7";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1214,10 +1108,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel_signup.ResumeLayout(false);
-            this.panel_signup.PerformLayout();
             this.panel_signin.ResumeLayout(false);
             this.panel_signin.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1335,26 +1229,16 @@
         private TextBox textBox7;
         private Button button7;
         private Button button8;
-        private Panel panel_signup;
-        private TextBox tb_userId1;
-        private Label label21;
-        private TextBox tb_Password1;
-        private TextBox tb_userName1;
-        private Button button_Signup2;
-        private Label label22;
-        private Label label23;
         private Panel panel_signin;
         private TextBox tb_password;
         private TextBox tb_username;
         private Button button_signin2;
-        private Button btn_signup1;
-        private Label label24;
-        private Label label25;
         private Label label26;
-        private TextBox tb_Search;
-        private Button button_signup1;
-        private Button btn_Signin;
-        private ListBox listB_AllInfoBook;
-        private Label label27;
+        private Panel panel3;
+        private Panel panel7;
+        private Panel panel4;
+        private Panel panel6;
+        private Panel panel5;
+        private Panel panel8;
     }
 }

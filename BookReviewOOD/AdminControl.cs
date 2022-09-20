@@ -80,6 +80,14 @@ namespace BookReviews
 
         private void btn_dtEMP_Click(object sender, EventArgs e)
         {
+            int index = dataGridView1.CurrentCell.RowIndex;
+            var oneEmployee = EmployeesList[index];   
+            EmployeesList.RemoveAt(EmployeesList.IndexOf(oneEmployee));
+            AddToDGV();
+        }
+
+        private void tb_empPassword_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

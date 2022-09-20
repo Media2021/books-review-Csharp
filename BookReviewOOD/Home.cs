@@ -34,12 +34,7 @@ namespace BookReviews
 
         }
 
-        private void btn_signup1_Click(object sender, EventArgs e)
-        {
-            panel_signin.Hide();
-            panel_signup.Visible = true;
 
-        }
 
         private void button_signin2_Click(object sender, EventArgs e)
         {     
@@ -76,11 +71,7 @@ namespace BookReviews
                         }
 
                     }
-                    else if (loggedUser is User)
-                    {
-                        ReviewsUser reviewsUser = new ReviewsUser((User)loggedUser);
-                        reviewsUser.Show();
-                    }
+                 
 
                    
 
@@ -96,36 +87,7 @@ namespace BookReviews
             
         }
 
-        private void button_Signup2_Click(object sender, EventArgs e)
-        {
-            if (tb_userId1.Text != "" && tb_userName1.Text != "" && tb_Password1.Text != "") 
-            {
-                int id = tb_userId1.Text.GetHashCode(); //?
-                string name = tb_userName1.Text;
-                string password = tb_Password1.Text;
 
-                User adduser = new User(id,name,password,DateTime.Now);
-
-                userList.Add(adduser);  
-                
-                
-            }
-            else
-            {
-                MessageBox.Show(" fields can not be empty");
-            }
-
-            tbPassword1.Clear();
-            tbUseName1.Clear();
-            tb_userId1.Clear();
-            
-            panel_signup.Hide();
-            panel_signin.Visible = true;
-
-         
-
-          
-        }
         private void addUsers()
         {
             listOU.Add(new User(100, "Jack", "1234"));
@@ -135,13 +97,18 @@ namespace BookReviews
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
-            List<Books> books = new List<Books>();
-            listB_AllInfoBook.Items.Clear();
-            foreach (var item in books)
-            {
+            //List<Books> books = new List<Books>();
+            //listB_AllInfoBook.Items.Clear();
+            //foreach (var item in books)
+            //{
 
-                listB_AllInfoBook.Items.Add(item);
-            }
+            //    listB_AllInfoBook.Items.Add(item);
+            //}
+        }
+
+        private void listB_AllInfoBook_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

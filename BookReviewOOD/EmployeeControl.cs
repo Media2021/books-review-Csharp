@@ -72,7 +72,7 @@ namespace BookReviews
            
             foreach (var book in addBooks)
             {
-                dataGridView1.Rows.Add(book.Id, book.title, book.Author, book.type, book.description);
+                dataGridView1.Rows.Add(book.Id, book.Title, book.Author, book.Type, book.Description);
             }
         }
 
