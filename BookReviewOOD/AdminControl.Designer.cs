@@ -86,6 +86,7 @@
             this.btn_dtEMP.TabIndex = 62;
             this.btn_dtEMP.Text = "Delete employee";
             this.btn_dtEMP.UseVisualStyleBackColor = true;
+            this.btn_dtEMP.Click += new System.EventHandler(this.btn_dtEMP_Click);
             // 
             // lblBookType
             // 
@@ -257,6 +258,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminControl";
             this.Text = "AdminControl";
+            this.Load += new System.EventHandler(this.AdminControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

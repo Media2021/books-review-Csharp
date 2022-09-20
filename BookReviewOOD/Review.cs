@@ -8,11 +8,11 @@ namespace BookReviews
 {
     public class Review
     {
-        int id; //Id of the review
-        string title;// 
-        string addReview;
-        User user;
-        DateTime date;
+        private int id; //Id of the review
+        private string title;// 
+        private string addReview;
+         User user;
+        private  DateTime date;
 
         public Review(int id, string title, string addReview, User user, DateTime date)
         {
@@ -29,9 +29,9 @@ namespace BookReviews
 
         public int Id { get { return id; } }
         public string Title { get { return title; } }
-        string AddReview { get { return addReview; } }
+        public string AddReview { get { return addReview; } }
         User User { get { return user; } }//?
-        DateTime Date { get { return date; } }
+        public DateTime Date { get { return date; } }
 
 
     }

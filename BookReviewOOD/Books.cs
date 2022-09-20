@@ -8,11 +8,11 @@ namespace BookReviews
 {
     public class Books
     {
-        public int id;//Book Id
-        public string title;
-        public string author;  
-        public string type;
-        public string description;
+        private int id;//Book Id
+        private string title;
+        private string author;  
+        private string type;
+        private string description;
         private List<Review> reviews;
 
         public Books()

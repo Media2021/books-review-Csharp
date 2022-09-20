@@ -72,5 +72,15 @@ namespace BookReviews
         {
             this.Close();
         }
+
+        private void AdminControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_dtEMP_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

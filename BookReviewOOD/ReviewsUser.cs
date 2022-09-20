@@ -93,7 +93,7 @@ namespace BookReviews
             foreach (var item in reviews)
             {
 
-                dataGridView1.Rows.Add(item);
+                dataGridView1.Rows.Add(item.Id,item.Title,item.AddReview,item.Date);
             }
         }
 
