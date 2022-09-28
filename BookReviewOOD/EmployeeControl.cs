@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookReviews.classes;
+using DBlayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,22 +9,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BookReviews
 {
     public partial class EmployeeControl : Form
     {
+        BookManager bookManager = new BookManager();
+        
 
 
-        List<Books> addBooks= new List<Books>();
+       
         Employee LoggedAdmin;
 
         public EmployeeControl(Employee LoggedUser)
         {
             InitializeComponent();
             this.LoggedAdmin = LoggedUser;
-            dummyBooks();
-            addToDGV();
+            //dummyBooks();
+            UpdateToDGV();
             lbl_override.Text = LoggedAdmin.Info();
 
         }
@@ -32,7 +37,7 @@ namespace BookReviews
             if (tbBookName.Text != "" && tbBookAuthor.Text != "" && comboBoxBookType.Text != "" && richTbDescription.Text != "")
 
             {
-                int Id = Convert.ToInt32(tbBookId.Text);
+                string  Id = Guid.NewGuid().ToString();
                 string Title = tbBookName.Text;
                 string Author = tbBookAuthor.Text;
                 string Type = comboBoxBookType.Text;
@@ -40,21 +45,21 @@ namespace BookReviews
 
 
 
-                Books addBook = new Books(Id,Title, Author, Type, Description);
+                Book addBook = new Book(Id,Title, Author, Type, Description);
                 //library.AddBook(addBook);
+               bookManager.Addbook(addBook);    
                
-                addBooks.Add(addBook);
 
-                addToDGV();
+                UpdateToDGV();
                 
 
 
 
                 MessageBox.Show(" New book  has been saved", "Good job", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbBookId.Clear();
+                
                 tbBookName.Clear();
                 tbBookAuthor.Clear();
-                comboBoxBookType.Items.Clear();
+             
                 richTbDescription.Clear();
              
 
@@ -66,28 +71,46 @@ namespace BookReviews
             }
         }
 
-        private void addToDGV()
+        private void UpdateToDGV()
         {
-            
+            dataGridView1.Rows.Clear();
            
-            foreach (var book in addBooks)
+            foreach (var book in bookManager.GetBooks())
             {
                 dataGridView1.Rows.Add(book.Id, book.Title, book.Author, book.Type, book.Description);
             }
         }
 
+        //private void updateDGV()
+        //{
+        //    dataGridView1.Rows.Clear();
+        //    var list = bookManager.Books();
+        //    foreach (var book in list)
+        //    {
+        //        dataGridView1.Rows.Add(book.Id, book.Title, book.Author, book.Type, book.Description);
+        //    }
+        //}
+
         private void BooksAdmin_Load(object sender, EventArgs e)
         {
-
+            //updateDGV();
         }
-        private void dummyBooks()
-        {
-            addBooks.Add(new Books(1, "GOT", "Jaack", " Advanture", "none"));
-        }
+        //private void dummyBooks()
+        //{
+        //    addBooks.Add(new Book(1, "GOT", "Jaack", " Advanture", "none"));
+        //}
 
         private void btn_loguot_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDeleteBook_Click(object sender, EventArgs e)
+        {
+            int index = dataGridView1.CurrentCell.RowIndex;
+            var book = bookManager.GetBooks()[index];
+            bookManager.DeleteBook(book);
+            UpdateToDGV();
         }
     }
 }

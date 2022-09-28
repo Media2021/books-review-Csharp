@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookReviews.classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,13 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BookReviews
 {
     public partial class AdminControl : Form
     {
+        PeopleManager peopleManager = new PeopleManager();
 
         List<Employee> EmployeesList = new List<Employee>();
+
         Employee LoggedAdmin;
         public AdminControl(Employee loggedAdmin)
         {
@@ -80,10 +84,14 @@ namespace BookReviews
 
         private void btn_dtEMP_Click(object sender, EventArgs e)
         {
+            //int index = dataGridView1.CurrentCell.RowIndex;
+            //var oneEmployee = EmployeesList[index];   
+            //EmployeesList.RemoveAt(EmployeesList.IndexOf(oneEmployee));
+            //AddToDGV();
+
             int index = dataGridView1.CurrentCell.RowIndex;
-            var oneEmployee = EmployeesList[index];   
-            EmployeesList.RemoveAt(EmployeesList.IndexOf(oneEmployee));
-            AddToDGV();
+            var user = peopleManager.Users()[index];
+            peopleManager.DeleteUser(user);
         }
 
         private void tb_empPassword_TextChanged(object sender, EventArgs e)

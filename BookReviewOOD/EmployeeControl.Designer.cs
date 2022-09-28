@@ -43,7 +43,6 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbBookId = new System.Windows.Forms.TextBox();
             this.btn_loguot = new System.Windows.Forms.Button();
             this.lbl_override = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -57,6 +56,7 @@
             this.btnDeleteBook.TabIndex = 47;
             this.btnDeleteBook.Text = "Delete book";
             this.btnDeleteBook.UseVisualStyleBackColor = true;
+            this.btnDeleteBook.Click += new System.EventHandler(this.btnDeleteBook_Click);
             // 
             // lblDescription
             // 
@@ -185,15 +185,6 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Read To Heal";
             // 
-            // tbBookId
-            // 
-            this.tbBookId.Location = new System.Drawing.Point(503, 183);
-            this.tbBookId.Name = "tbBookId";
-            this.tbBookId.PlaceholderText = "Book ID";
-            this.tbBookId.Size = new System.Drawing.Size(300, 55);
-            this.tbBookId.TabIndex = 50;
-            this.tbBookId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btn_loguot
             // 
             this.btn_loguot.Location = new System.Drawing.Point(723, 1130);
@@ -219,7 +210,6 @@
             this.ClientSize = new System.Drawing.Size(2722, 1249);
             this.Controls.Add(this.lbl_override);
             this.Controls.Add(this.btn_loguot);
-            this.Controls.Add(this.tbBookId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDeleteBook);
             this.Controls.Add(this.lblDescription);
@@ -250,7 +240,6 @@
         private Button btnAddBook;
         private DataGridView dataGridView1;
         private Label label1;
-        private TextBox tbBookId;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;

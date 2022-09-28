@@ -1,9 +1,11 @@
+using BookReviews.classes;
+
 namespace BookReviews
 {
     public partial class Home : Form
     {
         List<Person> listOU = new List<Person>();
-        List<User> userList = new List<User>();
+        //List<User> userList = new List<User>();
         public Home()
         {
             InitializeComponent();
@@ -90,9 +92,9 @@ namespace BookReviews
 
         private void addUsers()
         {
-            listOU.Add(new User(100, "Jack", "1234"));
-            listOU.Add(new Employee(101, "Media", "1234", 5678,"Admin"));
-            listOU.Add(new Employee(102, "Jen", "1234", 5678, "Employee"));
+            listOU.Add(new User("100", "Jack", "1234"));
+            listOU.Add(new Employee("101", "Media", "1234", 5678,"Admin"));
+            listOU.Add(new Employee("102", "Jen", "1234", 5678, "Employee"));
         }
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
