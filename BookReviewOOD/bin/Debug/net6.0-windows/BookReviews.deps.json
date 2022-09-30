@@ -91,14 +91,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "DAO/1.0.0": {
+      "DAL/1.0.0": {
         "runtime": {
-          "DAO.dll": {}
+          "DAL.dll": {}
         }
       },
       "DBlayer/1.0.0": {
         "dependencies": {
-          "DAO": "1.0.0",
+          "DAL": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
@@ -107,7 +107,7 @@
       },
       "LogicLayer/1.0.0": {
         "dependencies": {
-          "DAO": "1.0.0",
+          "DAL": "1.0.0",
           "DBlayer": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
@@ -186,7 +186,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "DAO/1.0.0": {
+    "DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

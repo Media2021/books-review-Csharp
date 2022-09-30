@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_EMPId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_dtEMP = new System.Windows.Forms.Button();
             this.tb_empPassword = new System.Windows.Forms.TextBox();
@@ -47,15 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tb_EMPId
-            // 
-            this.tb_EMPId.Location = new System.Drawing.Point(450, 266);
-            this.tb_EMPId.Name = "tb_EMPId";
-            this.tb_EMPId.PlaceholderText = "Employee ID";
-            this.tb_EMPId.Size = new System.Drawing.Size(300, 55);
-            this.tb_EMPId.TabIndex = 65;
-            this.tb_EMPId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -214,7 +204,6 @@
             this.Controls.Add(this.comboB_role);
             this.Controls.Add(this.btn_logout1);
             this.Controls.Add(this.tb_bsn);
-            this.Controls.Add(this.tb_EMPId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_dtEMP);
             this.Controls.Add(this.tb_empPassword);
@@ -231,7 +220,6 @@
         }
 
         #endregion
-        private TextBox tb_EMPId;
         private Label label1;
         private Button btn_dtEMP;
         private TextBox tb_empPassword;

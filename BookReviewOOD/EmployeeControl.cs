@@ -26,7 +26,7 @@ namespace BookReviews
         {
             InitializeComponent();
             this.LoggedAdmin = LoggedUser;
-            //dummyBooks();
+           
             UpdateToDGV();
             lbl_override.Text = LoggedAdmin.Info();
 
@@ -46,7 +46,7 @@ namespace BookReviews
 
 
                 Book addBook = new Book(Id,Title, Author, Type, Description);
-                //library.AddBook(addBook);
+               
                bookManager.Addbook(addBook);    
                
 
@@ -81,24 +81,13 @@ namespace BookReviews
             }
         }
 
-        //private void updateDGV()
-        //{
-        //    dataGridView1.Rows.Clear();
-        //    var list = bookManager.Books();
-        //    foreach (var book in list)
-        //    {
-        //        dataGridView1.Rows.Add(book.Id, book.Title, book.Author, book.Type, book.Description);
-        //    }
-        //}
+    
 
         private void BooksAdmin_Load(object sender, EventArgs e)
         {
-            //updateDGV();
+           
         }
-        //private void dummyBooks()
-        //{
-        //    addBooks.Add(new Book(1, "GOT", "Jaack", " Advanture", "none"));
-        //}
+      
 
         private void btn_loguot_Click(object sender, EventArgs e)
         {

@@ -87,6 +87,13 @@
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+#my-form1 textarea{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 #showcase{
 
     background-size: cover;

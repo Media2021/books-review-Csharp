@@ -147,21 +147,21 @@
           }
         }
       },
-      "DAO/1.0.0": {
+      "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DAO.dll": {}
+          "bin/placeholder/DAL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DAO.dll": {}
+          "bin/placeholder/DAL.dll": {}
         }
       },
       "DBlayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DAO": "1.0.0",
+          "DAL": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
@@ -175,7 +175,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DAO": "1.0.0",
+          "DAL": "1.0.0",
           "DBlayer": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
@@ -502,10 +502,10 @@
         "version.txt"
       ]
     },
-    "DAO/1.0.0": {
+    "DAL/1.0.0": {
       "type": "project",
-      "path": "../DAO/DAO.csproj",
-      "msbuildProject": "../DAO/DAO.csproj"
+      "path": "../DAO/DAL.csproj",
+      "msbuildProject": "../DAO/DAL.csproj"
     },
     "DBlayer/1.0.0": {
       "type": "project",

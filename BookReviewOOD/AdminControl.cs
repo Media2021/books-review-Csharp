@@ -30,9 +30,9 @@ namespace BookReviews
 
         private void btn_addEMP_Click(object sender, EventArgs e)
         {
-            if (tb_EMPId.Text != "" && tb_empName.Text!="" && tb_empPassword.Text !="" && tb_bsn.Text !="" && comboB_role.Text !="")
+            if ( tb_empName.Text!="" && tb_empPassword.Text !="" && tb_bsn.Text !="" && comboB_role.Text !="")
             {
-                int Id = Convert.ToInt32(tb_EMPId.Text);
+                string  Id = Guid.NewGuid().ToString();
                 string Name = tb_empName.Text;
                 string Password = tb_empPassword.Text;  
                 int Bsn = Convert.ToInt32(tb_bsn.Text);
@@ -49,7 +49,7 @@ namespace BookReviews
                 MessageBox.Show(" new employee has been saved");
 
 
-                tb_EMPId.Clear();
+               
                 tb_empName.Clear();
                 tb_empPassword.Clear();
                 tb_bsn.Clear();
@@ -65,6 +65,7 @@ namespace BookReviews
         private void AddToDGV()
         {
 
+            dataGridView1.Rows.Clear();
 
             foreach (var employee in EmployeesList)
             {
@@ -84,14 +85,12 @@ namespace BookReviews
 
         private void btn_dtEMP_Click(object sender, EventArgs e)
         {
-            //int index = dataGridView1.CurrentCell.RowIndex;
-            //var oneEmployee = EmployeesList[index];   
-            //EmployeesList.RemoveAt(EmployeesList.IndexOf(oneEmployee));
-            //AddToDGV();
+           
 
             int index = dataGridView1.CurrentCell.RowIndex;
-            var user = peopleManager.Users()[index];
-            peopleManager.DeleteUser(user);
+            var user = peopleManager.GetEmployees()[index];//?
+            peopleManager.DeleteEmp(user);
+            AddToDGV();
         }
 
         private void tb_empPassword_TextChanged(object sender, EventArgs e)
