@@ -32,10 +32,10 @@ namespace BookReviews.classes
         public void UpdateBooks()
         {
             books.Clear();
-            List<BookDAL> booksDAO = BooksDB.ReadBook();
-            foreach (var bookDao in booksDAO)
+            List<BookEntity> booksEntity = BooksDB.ReadBook();
+            foreach (var bookEntity in booksEntity)
             {
-                Book book = MapToDAO.MapToBook(bookDao);
+                Book book = MapToDAL.MapToBook(bookEntity);
                 books.Add(book);
             }
 
@@ -45,15 +45,16 @@ namespace BookReviews.classes
         public void DeleteBook(Book book)
         {
             books.Remove(book);
-            BookDAL bookDAO = MapToDAO.MapToBookDAO(book);
-            BooksDB.DeleteBook(bookDAO);
+            BookEntity bookEntity = MapToDAL.MapToBookDAL(book);
+            BooksDB.DeleteBook(bookEntity);
         }
 
         public void Addbook(Book book)
         {
             books.Add(book);
-            BookDAL bookDAO = MapToDAO.MapToBookDAO(book);
-            BooksDB.CreateBook(bookDAO);
+            BookEntity bookEntity = MapToDAL.MapToBookDAL(book);
+            BooksDB.CreateBook(bookEntity
+                );
         }
         
 

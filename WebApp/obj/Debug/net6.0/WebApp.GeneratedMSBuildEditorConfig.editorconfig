@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/AddReview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/BooksCollection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NDb2xsZWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/Error.cshtml]

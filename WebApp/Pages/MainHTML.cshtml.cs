@@ -2,11 +2,16 @@ using BookReviews.classes;
 using BookReviews;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Pages
 {
+
+    //[Authorize(Policy = "OnlyUserAccess")]
+
     public class MainHTMLModel : PageModel
     {
+
         BookManager bookManager = new BookManager();
 
         [BindProperty]

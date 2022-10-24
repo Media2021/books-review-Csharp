@@ -6,27 +6,27 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class BookDAL
+    public class BookEntity
     {
         private string id;//Book Id
         private string title;
         private string author;
         private string type;
         private string description;
-        private List<ReviewDAL> reviews;
+        private List<ReviewEntity> reviews;
 
-        public BookDAL()
+        public BookEntity()
         {
         }
 
-        public BookDAL(string id, string title, string author, string type, string description)
+        public BookEntity(string id, string title, string author, string type, string description)
         {
             this.id = id;
             this.title = title;
             this.author = author;
             this.type = type;
             this.description = description;
-            reviews = new List<ReviewDAL>();
+            reviews = new List<ReviewEntity>();
 
 
         }
@@ -39,7 +39,7 @@ namespace DAO
 
         public string Description { get { return description; } }
 
-        public List<ReviewDAL> Reviews { get => reviews; set => reviews = value; }
+        public List<ReviewEntity> Reviews { get => reviews; set => reviews = value; }
 
 
 

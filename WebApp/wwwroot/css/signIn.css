@@ -1,84 +1,14 @@
 
-.body{
-
-    margin: auto;
-    
-}
 
 
-.container{
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    
-
-
-
-}
-#main-header{
-    background-color: coral;
-    color: #fff;
-    text-align: center;
-    height: 70px;
-    display: flex;
-}
-#navbar{
-    background-color: #333;
-
-
-    color: white;
-}
-#navbar ul{
-    padding: 0;
-    list-style: none;
-}
-#navbar li{
-    display: inline;
-}
-#navbar a{
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding-right: 15px;
-}
-
-
-#main-footer{
-    
-
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 70px;
-}
-
-#showcase{
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center ;
-    margin: auto;
-    min-height: 480px;
-    
-}
-
-
-.new-container {
-
-    margin: auto;
-    width: 500px;
-    overflow: auto;  
-}
 
 #my-form {
     padding: 2rem;
     background: #333;
     color: white;
     text-align: center;
-    padding: 20px;
     margin-top: 80px;
-    
+    width: 30%
 }
 
 #my-form label {
@@ -127,10 +57,4 @@
 .btn2 a{
     color: white;
 
-}
-@media(max-width:600px){
-    .body{
-        width: 100%;
-        float: none;
-    }
 }

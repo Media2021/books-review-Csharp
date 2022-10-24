@@ -10,7 +10,7 @@ namespace BookReviews
 {
     public class Review
     {
-        private int id; //Id of the review
+        private int id; 
         private string title;// 
         private string addReview;
         User user;

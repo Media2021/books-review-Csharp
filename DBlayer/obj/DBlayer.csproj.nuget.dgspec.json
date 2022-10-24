@@ -4,12 +4,12 @@
     "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DBlayer\\DBlayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj": {
+    "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj",
+        "projectName": "DAO",
+        "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj",
         "packagesPath": "C:\\Users\\delsh\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\obj\\",
         "projectStyle": "PackageReference",
@@ -93,8 +93,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj": {
-                "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj"
+              "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj": {
+                "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj"
               }
             }
           }

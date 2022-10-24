@@ -12,7 +12,7 @@ namespace DBlayer
 
     
 
-        public void CreateBook(BookDAL book)
+        public void CreateBook(BookEntity book)
         {
             string sql = "insert into Book (id,title,author,type,description) values ( @Id,@title,@author,@type,@description);";
 
@@ -28,17 +28,17 @@ namespace DBlayer
 
 
         }
-        public void DeleteBook(BookDAL bookDAO)
+        public void DeleteBook(BookEntity bookDAL)
         {
             string sql = "DELETE FROM Book WHERE id = @id;";
 
             SqlCommand cmd = new SqlCommand(sql, this.conn);
-            cmd.Parameters.AddWithValue("@id", bookDAO.Id);
+            cmd.Parameters.AddWithValue("@id", bookDAL.Id);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public List<BookDAL> ReadBook()
+        public List<BookEntity> ReadBook()
         {
             string sql = "SELECT * FROM Book ;";
             SqlCommand cmd = new SqlCommand(sql, this.conn);
@@ -46,10 +46,10 @@ namespace DBlayer
             conn.Open();
            SqlDataReader dr=  cmd.ExecuteReader();
 
-            List<BookDAL> books = new List<BookDAL>();
+            List<BookEntity> books = new List<BookEntity>();
             while (dr.Read())
             {
-                books.Add(new BookDAL(Convert.ToString(dr[0]), Convert.ToString(dr[1]), Convert.ToString(dr[2]), Convert.ToString(dr[3]), Convert.ToString(dr[4])));
+                books.Add(new BookEntity(Convert.ToString(dr[0]), Convert.ToString(dr[1]), Convert.ToString(dr[2]), Convert.ToString(dr[3]), Convert.ToString(dr[4])));
 
             }
 

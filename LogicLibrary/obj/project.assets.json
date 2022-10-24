@@ -147,21 +147,21 @@
           }
         }
       },
-      "DAL/1.0.0": {
+      "DAO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/DAL.dll": {}
+          "bin/placeholder/DAO.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DAL.dll": {}
+          "bin/placeholder/DAO.dll": {}
         }
       },
       "DBlayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DAL": "1.0.0",
+          "DAO": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
@@ -487,10 +487,10 @@
         "version.txt"
       ]
     },
-    "DAL/1.0.0": {
+    "DAO/1.0.0": {
       "type": "project",
-      "path": "../DAO/DAL.csproj",
-      "msbuildProject": "../DAO/DAL.csproj"
+      "path": "../DAO/DAO.csproj",
+      "msbuildProject": "../DAO/DAO.csproj"
     },
     "DBlayer/1.0.0": {
       "type": "project",
@@ -500,7 +500,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "DAL >= 1.0.0",
+      "DAO >= 1.0.0",
       "DBlayer >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -538,8 +538,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj": {
-              "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAL.csproj"
+            "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj": {
+              "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DAO\\DAO.csproj"
             },
             "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DBlayer\\DBlayer.csproj": {
               "projectPath": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\DBlayer\\DBlayer.csproj"

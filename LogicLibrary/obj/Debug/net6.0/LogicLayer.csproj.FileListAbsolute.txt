@@ -13,5 +13,5 @@ C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\obj\De
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DBlayer.dll
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DBlayer.pdb
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\obj\Debug\net6.0\LogicLayer.csproj.CopyComplete
-C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DAL.dll
-C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DAL.pdb
+C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DAO.dll
+C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\LogicLibrary\bin\Debug\net6.0\DAO.pdb

@@ -1,51 +1,29 @@
 ﻿@page
 @model WebApp.Pages.SignInModel
 @{
+    Layout = "_Layout";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="~/css/signIn.css">
-    <title>Sign In</title>
-</head>
+<link rel="stylesheet" href="~/css/signIn.css">
 <body>
 
-    <header id="main-header">
-        <div class="container">
-            <h1>Read To Heal</h1>
-        </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a asp-page="/MainHTML">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <section id="showcase">
+    <h1>
+        Please login first
+    </h1>
+  
         <div class="new-container">
             <form method="POST" id="my-form">
                 <h1>Sign in</h1>
 
                 <div>
-                   
-                    <input asp-for="Person.Name" type="text" id="username" placeholder="Enter your username">
-                    <span asp-validation-for="Person.Name"></span>
+
+                <input asp-for="userDTO.Name " type="text" id="username" placeholder="Enter your username">
+                <span asp-validation-for="userDTO.Name"></span>
                 </div>
                 <div>
                  
-                    <input asp-for="Person.Password" type="password" id="Password" placeholder="Enter your password">
-                    <span asp-validation-for="Person.Password"></span>
+                    <input asp-for="userDTO.Password" type="password" id="Password" placeholder="Enter your password">
+                    <span asp-validation-for="userDTO.Password"></span>
                 </div>
 
                 <input class="btn1" type="submit" value="Submit">
@@ -57,17 +35,5 @@
  }
         </div>
      
-    </section>
-
-
-
-
-    <section class="new-container">
-    </section>
-
-
-    <footer id="main-footer">
-        <p>Copyright & Privacy; 2022 Media</p>
-    </footer>
 </body>
-</html>
+

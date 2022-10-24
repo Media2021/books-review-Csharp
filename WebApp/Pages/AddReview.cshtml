@@ -14,38 +14,23 @@
     <title>Add review</title>
 </head>
 <body>
-    <header id="main-header">
-        <div class="container">
-            <h1>Read To Heal</h1>
-        </div>
-    </header>
-    <nav id="navbar">
-        <div class="container">
-            <ul>
-                <li><a asp-page="/MainHTML">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <section id="showcase">
 
         <div class="new-container1">
             <form method="POST" id="my-form1">
                 <h1>Add review</h1>
 
                 <div>
+               @* <input  type="text" id="username " placeholder="@Model.user.Name">
+               *@
                    
-                    <input asp-for="Review.Id" type="text" id="id " placeholder="ID book"  >
-                    <span asp-validation-for="Review.Id"></span>
+                    <input  type="text" id="id " placeholder="@Model.book.Id"  >
+                   
 
                 </div>
                 <div>
+
+                <input  type="text" id="Name" placeholder="@Model.book.Title">
                     
-                    <input asp-for="Review.Title" type="text" id="Name"  placeholder="Book title" >
-                    <span asp-validation-for="Review.Title"></span>
 
                 </div>
 
@@ -74,8 +59,8 @@
             @section Scripts {
                 <partial name="_ValidationScriptsPartial" />
 }
+ 
         </div>
-    </section>
     
 
     <div class="countainer">
@@ -122,10 +107,6 @@
         </table>
     </div>
 
-
-    <footer id="main-footer">
-        <p>Copyright & Privacy; 2022 Media</p>
-    </footer>
 
 </body>
 </html>

@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "LogicLayer/1.0.0": {
         "dependencies": {
-          "DAL": "1.0.0",
+          "DAO": "1.0.0",
           "DBlayer": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
@@ -91,14 +91,14 @@
         }
       },
       "System.Security.Principal.Windows/4.7.0": {},
-      "DAL/1.0.0": {
+      "DAO/1.0.0": {
         "runtime": {
-          "DAL.dll": {}
+          "DAO.dll": {}
         }
       },
       "DBlayer/1.0.0": {
         "dependencies": {
-          "DAL": "1.0.0",
+          "DAO": "1.0.0",
           "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
@@ -176,7 +176,7 @@
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
-    "DAL/1.0.0": {
+    "DAO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

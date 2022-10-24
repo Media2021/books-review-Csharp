@@ -10,24 +10,30 @@ namespace BookReviews.classes
     public abstract class Person
     {
 
-        private string  id;
+        private int  id;
         private string name;
         private string password;
 
+       
 
-        public Person(string id, string name, string password)
+        public Person(int id, string name, string password)
         {
             this.id = id;
             this.name = name;
             this.password = password;
 
         }
-        [Required]
-        public string  ID { get { return id; } }
-        [Required]
+        public Person( string name, string password)
+        {
+            this.name = name;
+            this.password = password;
+        }
+
+        public int  ID { get { return id; } }
+      
 
         public string Name { get { return name; } }
-        [Required]
+       
 
         public string Password { get { return password; } }
 

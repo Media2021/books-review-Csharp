@@ -1,9 +1,31 @@
+using BookReviews.classes;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
+using WebApp.DTO;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+//{
+//    options.LoginPath = new PathString("/SignIn");
+//    options.AccessDeniedPath = new PathString("/AccessDenied");
+//}
+//);
+
+////add policy for authorization
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("OnlyUserAccess",
+//       policy => policy.RequireClaim(ClaimTypes.AuthorizationDecision,   person.Name));
+//}
+//);
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -17,6 +39,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+//app.UseAuthentication();
 
 app.UseAuthorization();
 

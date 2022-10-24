@@ -1,0 +1,47 @@
+﻿@page
+@model WebApp.Pages.BooksCllectionModel
+@{
+    Layout = "_Layout";
+
+}
+<link rel="stylesheet" href="~/css/main.css">
+
+<body>
+
+    <div class="countainer">
+        <table method="GET" class="table">
+            <tr>
+                <th>Book id</th>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Type</th>
+                <th>Description</th>
+
+
+            </tr>
+            @{
+
+                foreach (var item in @Model.books)
+                {
+                    <tr>
+
+                        <td> <em>@item.Id</em></td>
+                        <td>@item.Title</td>
+                        <td>@item.Author</td>
+                        <td>@item.Type</td>
+                        <td>@item.Description</td>
+
+                    </tr>
+                }
+            }
+            @*
+
+
+
+            *@
+
+        </table>
+    </div>
+
+</body>
+

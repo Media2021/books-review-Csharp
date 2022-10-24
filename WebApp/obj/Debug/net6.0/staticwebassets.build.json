@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zT3ib92BbsQUgWoyBC9Kzv93v19RauTvU/FNoBbb65g=",
+  "Hash": "F4J74mBYnUWEm0j9xWgCt7IUS3pTDzYV85o4MZwvrHE=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\WebApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\WebApp\\wwwroot\\css\\layout.css",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "css/layout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\layout.css"
     },
     {
       "Identity": "C:\\Users\\delsh\\OneDrive\\Desktop\\Semester2Fontys\\booksreviews\\WebApp\\wwwroot\\css\\main.css",

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class ReviewDAL
+    public class ReviewEntity
     {
 
         private int id; //Id of the review
         private string title;// 
         private string addReview;
-        UserDAL user;
+        UsercEntity user;
         private DateTime date;
 
-        public ReviewDAL(int id, string title, string addReview, UserDAL user, DateTime date)
+        public ReviewEntity(int id, string title, string addReview, UsercEntity user, DateTime date)
         {
             this.id = id;
             this.title = title;
@@ -25,7 +25,7 @@ namespace DAO
             this.date = date;
         }
 
-        public ReviewDAL(int getId, string getBookName, string getReview, string getUserName, string getDate)//?
+        public ReviewEntity(int getId, string getBookName, string getReview, string getUserName, string getDate)//?
         {
         }
 
@@ -37,7 +37,7 @@ namespace DAO
         public string? AddReview { get { return addReview; } }
 
 
-        UserDAL User { get { return user; } }//?
+        UsercEntity User { get { return user; } }//?
      
 
         public DateTime? Date { get { return date; } }

@@ -11,9 +11,13 @@ namespace BookReviews.classes
         private int BSN;
         private string role;
 
+        public Employee( string name, string password, int BSN, string role) : base(name, password)
+        {
+            this.BSN = BSN;
+            this.role = role;
+        }
 
-
-        public Employee(string id, string name, string password, int BSN, string role) : base(id, name, password)
+        public Employee(int id, string name, string password, int BSN, string role) : base(id, name, password)
         {
             this.BSN = BSN;
             this.role = role;

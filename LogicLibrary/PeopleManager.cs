@@ -14,57 +14,112 @@ namespace BookReviews
 {
     public  class PeopleManager
     {
-      
-       
-        List<User> users = new List<User>();  
-        List<Employee> employees = new List<Employee>();
+  
         BooksDB myDB= new BooksDB();
         PersonDB personDB = new PersonDB();
-
+        List<Person> people = new List<Person>();
+        List<User> users = new List<User>();
        
         public PeopleManager()
-        {
-           users.Clear();
-            
+        {           
+            UpdatePeopleList();            
         }
-
-        public List<User> Users()
+        public List<Person> GetPeople()
+        {
+            return people;
+        }
+        public List<User> GetUser()
         {
             return users;
         }
-        public List<Employee> Employees()
+
+        public void UpdatePeopleList()
         {
-            return employees;
+            people.Clear();
+            List<PersonEntity> personEntity = new List<PersonEntity>();
+
+            personEntity.AddRange(personDB.GetAllPeople());
+
+            foreach (PersonEntity person in personEntity)
+            {
+                if (person is EmpEntity)
+                {
+                    people.Add(MapToDAL.MapToEmp((EmpEntity)person));
+                   
+                }
+                else
+                {
+                    people.Add(MapToDAL.MapToUser((UsercEntity)person));
+                    
+                }
+            }
+            
+
         }
+        public bool Login(string username,string password)
+        {
+            bool isTrue = people.Exists(x => x.Name == username);
+
+            if (isTrue)
+            {
+                Person loggedUser = people.Find(x => x.Name == username);
+
+                
+                 return loggedUser.Login(password);
+
+                
+            }
+            return false;
+
+        }
+        public Person GetLoggedInUser(string username)
+        {
+            Person loggedUser = people.Find(x => x.Name == username);
+            return loggedUser;
+        }
+
+        //public Person GetLoggedInUserId(int ID)
+        //{
+        //    Person loggedUser = people.Find(x => x.ID == ID);
+        //    return loggedUser;
+        //}
+
+
+
+        public void AddUser(User user)
+        {
+            people.Add(user);
+
+            UsercEntity userDAL = MapToDAL.MapToUserDAL(user);
+
+            personDB.CreateUser(userDAL);
+        } 
+
 
         public void DeleteUser(User user)
         {
-            users.Remove(user);
+            people.Remove(user);
+            UsercEntity userEntity = MapToDAL.MapToUserDAL(user);
+            personDB.DeleteUser(userEntity);
         }
-        public void addUser(User user)
-        {
-            users.Add(user);
-        }
-        public List<Employee> GetEmployees()
-        {
-            return employees;   
-        }
+
+
         public void addEmp(Employee employee)
         {
-            employees.Add(employee);
+            people.Add(employee);
 
-            EmpDAL empDAO = MapToDAO.MapToEmpDAO(employee);
+            EmpEntity empEntity = MapToDAL.MapToEmpDAL(employee);
             
-            personDB.CreateEmp(empDAO);
+            personDB.CreateEmp(empEntity);
 
         }
         public void DeleteEmp(Employee employee)
         {
-            employees.Remove(employee);
-           
-            EmpDAL empDAO = MapToDAO.MapToEmpDAO(employee);
-            personDB.DeleteEmp(empDAO);
-        }
+            people.Remove(employee);
 
+            EmpEntity empEntity = MapToDAL.MapToEmpDAL(employee);
+            personDB.DeleteEmp( empEntity );
+        }
+      
     }
 }

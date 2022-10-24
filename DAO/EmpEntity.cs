@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public  class EmpDAL:PersonDAL
+    public  class EmpEntity:PersonEntity
     {
         private int BSN;
         private string role;
 
-        public EmpDAL(string id, string name, string password,int BSN,string role) : base(id, name, password)
+        public EmpEntity(int id, string name, string password,int BSN,string role) : base(id, name, password)
         {
             this.role = role;
             this.BSN = BSN; 
