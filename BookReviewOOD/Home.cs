@@ -5,11 +5,12 @@ namespace BookReviews
     public partial class Home : Form
     {
         List<Person> listOU = new List<Person>();
+        PeopleManager peopleManager = new PeopleManager();
         //List<User> userList = new List<User>();
         public Home()
         {
             InitializeComponent();
-            addUsers();  
+           
             
         }
 
@@ -44,45 +45,89 @@ namespace BookReviews
             string name= tb_username.Text;
             string password = tb_password.Text;
 
-            bool isTrue = listOU.Exists(x=>x.Name==name);
+            bool result =peopleManager.Login(name,password);
+            
 
-            if (isTrue)
+            if (result)
             {
-                Person loggedUser = listOU.Find(x => x.Name == name);
-
-                if (loggedUser.Login(password))
-                {
+                Person loggedUser = peopleManager.GetLoggedInUser(name);
+                
+             
                     if (loggedUser is Employee)
                     {
-                        
+
                         //Employee employee = (Employee)listOU.Find(x => x.Name == loggedUser.Name);
                         Employee employee = (Employee)loggedUser;
 
-                        if (employee.Role == "Admin" )
+                        if (employee.Role == "Admin")
                         {
                             AdminControl adminControl = new AdminControl((Employee)loggedUser);
                             adminControl.Show();
                         }
                         else
                         {
-                           
+
                             this.Hide();
                             EmployeeControl bookAdd = new EmployeeControl((Employee)loggedUser);
                             bookAdd.Show();
-                           
+
                         }
 
                     }
+                else
+                {
+                    MessageBox.Show("u r not an emp");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show(" username or password is wrong ");
+            }
+
+
+
+
+
+            //bool isTrue = listOU.Exists(x=>x.Name==name);
+
+            //if (isTrue)
+            //{
+            //    Person loggedUser = listOU.Find(x => x.Name == name);
+
+            //    if (loggedUser.Login(password))
+            //    {
+            //        if (loggedUser is Employee)
+            //        {
+                        
+            //            //Employee employee = (Employee)listOU.Find(x => x.Name == loggedUser.Name);
+            //            Employee employee = (Employee)loggedUser;
+
+            //            if (employee.Role == "Admin" )
+            //            {
+            //                AdminControl adminControl = new AdminControl((Employee)loggedUser);
+            //                adminControl.Show();
+            //            }
+            //            else
+            //            {
+                           
+            //                this.Hide();
+            //                EmployeeControl bookAdd = new EmployeeControl((Employee)loggedUser);
+            //                bookAdd.Show();
+                           
+            //            }
+
+            //        }
                  
 
                    
 
-                }
-                else
-                {
-                    MessageBox.Show(" username or password is wrong ");
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show(" username or password is wrong ");
+            //    }
+            //}
 
           
 
@@ -90,12 +135,12 @@ namespace BookReviews
         }
 
 
-        private void addUsers()
-        {
-            listOU.Add(new User("100", "Jack", "1234"));
-            listOU.Add(new Employee("101", "Media", "1234", 5678,"Admin"));
-            listOU.Add(new Employee("102", "Jen", "1234", 5678, "Employee"));
-        }
+        //private void addUsers()
+        //{
+        //    listOU.Add(new User("100", "Jack", "1234"));
+        //    listOU.Add(new Employee("101", "Media", "1234", 5678,"Admin"));
+        //    listOU.Add(new Employee("102", "Jen", "1234", 5678, "Employee"));
+        //}
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {

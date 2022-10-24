@@ -22,6 +22,7 @@ namespace BookReviews
         public AdminControl(Employee loggedAdmin)
         {
             InitializeComponent();
+            updateEmp();
             AddToDGV();
             
             LoggedAdmin = loggedAdmin;
@@ -32,16 +33,17 @@ namespace BookReviews
         {
             if ( tb_empName.Text!="" && tb_empPassword.Text !="" && tb_bsn.Text !="" && comboB_role.Text !="")
             {
-                string  Id = Guid.NewGuid().ToString();
+               
                 string Name = tb_empName.Text;
                 string Password = tb_empPassword.Text;  
                 int Bsn = Convert.ToInt32(tb_bsn.Text);
                 string role = comboB_role.Text;
 
 
-                Employee Newemp = new Employee(Id,Name,Password,Bsn,role);
+                Employee Newemp = new Employee(Name,Password,Bsn,role);
+                peopleManager.addEmp(Newemp);
 
-                EmployeesList.Add(Newemp);
+                updateEmp();
 
                 AddToDGV();
 
@@ -62,14 +64,28 @@ namespace BookReviews
             }
          
         }
+        private void updateEmp()
+        {
+            EmployeesList.Clear();
+            foreach (var person in peopleManager.GetPeople())
+            {
+                if (person is Employee)
+                {
+                    EmployeesList.Add((Employee)person);
+                }
+
+            }
+        }
         private void AddToDGV()
         {
 
             dataGridView1.Rows.Clear();
 
-            foreach (var employee in EmployeesList)
-            {
-                dataGridView1.Rows.Add(employee.ID,employee.Name,employee.Password, employee.BSN1, employee.Role);
+            foreach (var emp in EmployeesList)
+            {               
+
+                dataGridView1.Rows.Add(emp.ID, emp.Name, emp.Password, emp.BSN1, emp.Role);               
+                
             }
         }
 
@@ -88,8 +104,9 @@ namespace BookReviews
            
 
             int index = dataGridView1.CurrentCell.RowIndex;
-            var user = peopleManager.GetEmployees()[index];//?
+            var user = EmployeesList[index];//?
             peopleManager.DeleteEmp(user);
+            updateEmp();
             AddToDGV();
         }
 
