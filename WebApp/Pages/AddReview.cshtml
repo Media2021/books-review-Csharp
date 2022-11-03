@@ -15,13 +15,20 @@
 </head>
 <body>
 
+    
+@if (User.FindFirst("id") != null)
+{
+    <p> Your user id is: @User.FindFirst("id").Value</p>
+  <p> Your name is @User.Identity.Name</p>
+}
+
         <div class="new-container1">
             <form method="POST" id="my-form1">
                 <h1>Add review</h1>
 
                 <div>
-               @* <input  type="text" id="username " placeholder="@Model.user.Name">
-               *@
+                <input type="text" id="username " placeholder="@User.Identity.Name">
+               
                    
                     <input  type="text" id="id " placeholder="@Model.book.Id"  >
                    

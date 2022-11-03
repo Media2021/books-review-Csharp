@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿
+using System.Data.SqlClient;
 using System.Data;
 using DAO;
 
@@ -71,7 +72,24 @@ namespace DBlayer
         //    con.Close();
 
 
+        public void CreateBookReview(ReviewEntity review)
+        {
+            string sql = "insert into Table_Review (userId,bookId,bookName,date,review) values (@userId,@bookId,@bookName,@date,@review);";
 
+            SqlCommand cmd = new SqlCommand(sql, this.conn);
+          
+            cmd.Parameters.AddWithValue("@userId", review.User);
+            cmd.Parameters.AddWithValue("@bookId", review.Id);
+            cmd.Parameters.AddWithValue("@bookName", review.Title);
+            cmd.Parameters.AddWithValue("@date", review.Date);
+            cmd.Parameters.AddWithValue("@review", review.AddReview);
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+
+        }
 
 
     }

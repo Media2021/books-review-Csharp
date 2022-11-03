@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace WebApp.Pages
 {
-
+    //[Authorize(Policy = "OnlyUserAccess")]
     //[Authorize(Policy = "OnlyUserAccess")]
 
     public class MainHTMLModel : PageModel

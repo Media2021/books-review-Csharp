@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace WebApp.Pages
 {
+        //[Authorize(Policy = "OnlyUserAccess")]
     public class AddReviewModel : PageModel
     {
-        
         BookManager bookManager = new BookManager();
         PeopleManager peopleManager = new PeopleManager();  
         [BindProperty]

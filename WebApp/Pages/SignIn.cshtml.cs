@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Security.Claims;
 using System.Xml.Linq;
 using WebApp.DTO;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApp.Pages
 {
@@ -17,6 +18,7 @@ namespace WebApp.Pages
     {
         PeopleManager peopleManager = new PeopleManager();
          public Person person { get; set; } 
+
 
         [BindProperty]
         public   UserDto userDTO { get; set; }
@@ -32,30 +34,38 @@ namespace WebApp.Pages
             bool result = peopleManager.Login(userDTO.Name, userDTO.Password);
            
 
+
             if (result)
             {
-                //person=peopleManager.GetLoggedInUser(userDTO.Name);
-                //List<Claim> claims = new List<Claim>();
-                //claims.Add(new Claim(ClaimTypes.Name, userDTO.Name));
+                person = peopleManager.GetLoggedInUser(userDTO.Name);
+                List<Claim> claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.Name, userDTO.Name));
+                claims.Add(new Claim("id", ""+person.ID));
 
-                //var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                //HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
+                
+
+
+
                 if (person is Employee)
+
                 {
-                    return RedirectToPage("/BooksCollection");
+                    
 
+                    claims.Add(new Claim(ClaimTypes.Role, "Employee"));
+                    var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
 
-                    //return new RedirectToPageResult("/BooksCollection");
+                    return new RedirectToPageResult("/BooksCollection");
                 }
-                else
+                else 
                 {
-                    //claims.Add(new Claim(ClaimTypes.AuthorizationDecision, userDTO.Name));
+                    
 
 
-                    //return new RedirectToPageResult("MainHTML");
+                    return new RedirectToPageResult($"/MainHTML");
 
-                    return RedirectToPage("/MainHtml");
                 }
+
             }
             else
             {

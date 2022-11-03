@@ -13,7 +13,7 @@ namespace DAO
         private int id; //Id of the review
         private string title;// 
         private string addReview;
-        UsercEntity user;
+        private  UsercEntity user;
         private DateTime date;
 
         public ReviewEntity(int id, string title, string addReview, UsercEntity user, DateTime date)
@@ -37,7 +37,7 @@ namespace DAO
         public string? AddReview { get { return addReview; } }
 
 
-        UsercEntity User { get { return user; } }//?
+       public  UsercEntity User { get { return user; } }//?
      
 
         public DateTime? Date { get { return date; } }

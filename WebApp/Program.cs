@@ -1,7 +1,6 @@
 using BookReviews.classes;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
-using WebApp.DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,20 +8,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 
-//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
-//{
-//    options.LoginPath = new PathString("/SignIn");
-//    options.AccessDeniedPath = new PathString("/AccessDenied");
-//}
-//);
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.LoginPath = new PathString("/SignIn");
+    options.AccessDeniedPath = new PathString("/AccessDenied");
+}
+);
 
-////add policy for authorization
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("OnlyUserAccess",
-//       policy => policy.RequireClaim(ClaimTypes.AuthorizationDecision,   person.Name));
-//}
-//);
+//add policy for authorization
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("OnlyEmployeeAccess",
+       policy => policy.RequireClaim(ClaimTypes.Role, "Employee"));
+}
+);
+
 
 var app = builder.Build();
 
@@ -39,7 +39,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-//app.UseAuthentication();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
