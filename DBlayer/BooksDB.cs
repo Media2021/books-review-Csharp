@@ -62,27 +62,21 @@ namespace DBlayer
 
 
 
-        //cmd.Connection = con;
-        //    con.Open();
-        //    cmd.CommandText = "insert into BookAdd (ID,Title,BookAuthor,Pages,Quantity,Genre,Publication,Descriptions) values (" + ID + ",'" +
-        //      title + "','" + bookAuthor + "'," + pages + ","
-        //        + quantity + ",'" + genre + "' , " + publication + ",'"
-        //        + descriptions + "');";
-        //    cmd.ExecuteNonQuery();
-        //    con.Close();
+    
 
 
         public void CreateBookReview(ReviewEntity review)
         {
-            string sql = "insert into Table_Review (userId,bookId,bookName,date,review) values (@userId,@bookId,@bookName,@date,@review);";
+            string sql = "insert into Table_Review (bookId,bookName,userName,review,date) values (@bookId,@bookName,@userName,@review,@date);";
 
             SqlCommand cmd = new SqlCommand(sql, this.conn);
-          
-            cmd.Parameters.AddWithValue("@userId", review.User);
+
+           
             cmd.Parameters.AddWithValue("@bookId", review.Id);
             cmd.Parameters.AddWithValue("@bookName", review.Title);
-            cmd.Parameters.AddWithValue("@date", review.Date);
+            cmd.Parameters.AddWithValue("@userName", review.User.Name);
             cmd.Parameters.AddWithValue("@review", review.AddReview);
+            cmd.Parameters.AddWithValue("@date", review.Date);
 
             conn.Open();
             cmd.ExecuteNonQuery();
@@ -90,6 +84,60 @@ namespace DBlayer
 
 
         }
+        public List<ReviewEntity> ReadReviews()
+        {
+            string sql ="SELECT * FROM Table_Review as re inner join Table_User  as us on re.userName = us.name";
+            SqlCommand cmd = new SqlCommand(sql, this.conn);
+
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            List<ReviewEntity> reviews = new List<ReviewEntity>();
+            while (dr.Read())
+            {
+                int id = Convert.ToInt32(dr[0]);
+                string bookId = Convert.ToString(dr[1]);
+                string title = Convert.ToString(dr[2]);
+                string userName= Convert.ToString(dr[3]);
+                string review = Convert.ToString(dr[4]);
+                DateTime date = Convert.ToDateTime(dr[5]);
+                int userId = Convert.ToInt32(dr[6]);
+                string password = Convert.ToString(dr[8]);
+                DateTime expDate=Convert.ToDateTime(dr[9]);
+
+                UsercEntity user = new UsercEntity(userId,userName,password,expDate);
+
+                reviews.Add(new ReviewEntity(id, bookId, title, user, review, date));
+
+            }
+
+            conn.Close();
+
+            return reviews;
+        }
+        public void DeleteReview(ReviewEntity reviewDAL)
+        {
+            string sql = "DELETE FROM Table_Review WHERE reviewId = @id;";
+
+            SqlCommand cmd = new SqlCommand(sql, this.conn);
+            cmd.Parameters.AddWithValue("@id", reviewDAL.ReviewId);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void UpdateReview(ReviewEntity reviewDAL)
+        {
+            string sql = "UPDATE Table_Review SET review = @addReview  WHERE reviewId = @id;";
+
+            SqlCommand cmd = new SqlCommand(sql, this.conn);
+            cmd.Parameters.AddWithValue("@id", reviewDAL.ReviewId);
+            cmd.Parameters.AddWithValue("@addReview", reviewDAL.AddReview);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+      
+
 
 
     }

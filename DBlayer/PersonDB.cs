@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DBlayer
 {
-    public  class PersonDB
+    public  class PersonDB:IPersonDB
     {
         SqlConnection conn = new SqlConnection("server  = mssqlstud.fhict.local;database= dbi499087;User Id = dbi499087; Password=2018Ayham.; ");
 

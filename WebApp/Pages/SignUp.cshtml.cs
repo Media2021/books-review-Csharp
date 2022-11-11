@@ -1,5 +1,6 @@
 using BookReviews;
 using BookReviews.classes;
+using DBlayer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApp.DTO;
@@ -8,8 +9,10 @@ namespace WebApp.Pages
 {
     public class SignUpModel : PageModel
     {
-       
-        PeopleManager peopleManager = new PeopleManager();
+
+        //PeopleManager peopleManager = new PeopleManager();
+        static PersonDB personDB = new PersonDB();
+        PeopleManager peopleManager = new PeopleManager(personDB);
 
         [BindProperty]
         public UserDto user { get; set; }

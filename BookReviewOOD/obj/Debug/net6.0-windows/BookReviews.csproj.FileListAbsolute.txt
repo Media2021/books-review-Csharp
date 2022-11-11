@@ -65,5 +65,5 @@ C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\D
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\DAL.dll
-C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\DAL.pdb
+C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\DAO.dll
+C:\Users\delsh\OneDrive\Desktop\Semester2Fontys\booksreviews\BookReviewOOD\bin\Debug\net6.0-windows\DAO.pdb

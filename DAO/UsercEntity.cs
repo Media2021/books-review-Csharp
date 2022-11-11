@@ -16,9 +16,6 @@ namespace DAO
         {
             this.expirationDate = expirationDate;
         }
-        public UsercEntity(int id, string name, string password) : base(id, name, password)
-        {
-            expirationDate = DateTime.Now.AddDays(365);
-        }
+       
     }
 }

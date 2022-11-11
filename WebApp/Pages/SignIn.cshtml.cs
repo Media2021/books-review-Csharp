@@ -10,14 +10,18 @@ using System.Security.Claims;
 using System.Xml.Linq;
 using WebApp.DTO;
 using Microsoft.AspNetCore.Identity;
+using DBlayer;
 
 namespace WebApp.Pages
 {
     
     public class SignInModel : PageModel
     {
-        PeopleManager peopleManager = new PeopleManager();
-         public Person person { get; set; } 
+        //PeopleManager peopleManager = new PeopleManager();
+        static PersonDB personDB = new PersonDB();
+        PeopleManager peopleManager = new PeopleManager(personDB);
+
+        public Person person { get; set; } 
 
 
         [BindProperty]
@@ -42,21 +46,25 @@ namespace WebApp.Pages
                 claims.Add(new Claim(ClaimTypes.Name, userDTO.Name));
                 claims.Add(new Claim("id", ""+person.ID));
 
-                
+
 
 
 
                 if (person is Employee)
 
                 {
+                    claims.Add(new Claim(ClaimTypes.Role, "Employee"));
+                }
                     
 
-                    claims.Add(new Claim(ClaimTypes.Role, "Employee"));
                     var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                     HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity));
+                    if (person is Employee)
+                    {
 
-                    return new RedirectToPageResult("/BooksCollection");
-                }
+                        return new RedirectToPageResult("/BooksCollection");
+                    }
+                
                 else 
                 {
                     

@@ -1,11 +1,14 @@
 using BookReviews.classes;
+using DBlayer;
 
 namespace BookReviews
 {
     public partial class Home : Form
     {
         List<Person> listOU = new List<Person>();
-        PeopleManager peopleManager = new PeopleManager();
+        //PeopleManager peopleManager = new PeopleManager();
+        static PersonDB personDB = new PersonDB();
+        PeopleManager peopleManager = new PeopleManager(personDB);
         //List<User> userList = new List<User>();
         public Home()
         {

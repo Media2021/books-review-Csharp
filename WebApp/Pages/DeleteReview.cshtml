@@ -1,0 +1,21 @@
+﻿@page
+@model WebApp.Pages.DeleteReviewModel
+@{
+    Layout = "_Layout";
+
+}
+
+<link rel="stylesheet" href="~/css/review.css">
+
+
+<div class="new-container1">
+    <form method="POST" id="my-form1">
+
+        <h1>Are you sure you wanna delete your review with id  @Model.reviewDTO.ReviewId ?</h1>
+
+      
+
+        <button class="btn1" type="submit" value=" ">YES DELETE</button>
+
+    </form>
+</div>

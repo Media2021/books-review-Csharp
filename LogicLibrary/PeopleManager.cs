@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using static System.Reflection.Metadata.BlobBuilder;
 using DAO;
 using LogicLayer.Mapper;
+using System.Data;
 
 namespace BookReviews
 {
@@ -16,12 +17,13 @@ namespace BookReviews
     {
   
         BooksDB myDB= new BooksDB();
-        PersonDB personDB = new PersonDB();
+        IPersonDB personDB;
         List<Person> people = new List<Person>();
         List<User> users = new List<User>();
        
-        public PeopleManager()
-        {           
+        public PeopleManager(IPersonDB personDB)
+        {
+            this.personDB = personDB;
             UpdatePeopleList();            
         }
         public List<Person> GetPeople()
@@ -78,11 +80,7 @@ namespace BookReviews
             return loggedUser;
         }
 
-        //public Person GetLoggedInUserId(int ID)
-        //{
-        //    Person loggedUser = people.Find(x => x.ID == ID);
-        //    return loggedUser;
-        //}
+      
 
 
 
@@ -121,5 +119,8 @@ namespace BookReviews
             personDB.DeleteEmp( empEntity );
         }
       
+
+
+
     }
 }

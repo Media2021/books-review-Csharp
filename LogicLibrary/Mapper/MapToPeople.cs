@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BookReviews.classes;
+using DAO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,9 @@ namespace LogicLayer.Mapper
 {
     public static  class MapToPeople
     {
+        public static User MapToUserDAL(UsercEntity user)
+        {
+            return new User(user.Id, user.Name, user.Password, user.ExpirationDate);
+        }
     }
 }

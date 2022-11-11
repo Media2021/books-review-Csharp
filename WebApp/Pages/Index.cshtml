@@ -4,4 +4,77 @@
     ViewData["Title"] = "Home page";
     Layout = "_Layout";
 }
+<link rel="stylesheet" href="~/css/main.css">
 
+<div class="countainer">
+    <table method="GET" class="table">
+        <tr>
+            <th>Review  id</th>
+
+            <th>Book id</th>
+            <th>Book Title</th>
+            <th>User</th>
+            <th>Review</th>
+            <th>Date</th>
+
+
+        </tr>
+        @{
+
+            foreach (var item in @Model.Reviews)
+            {
+                <tr>
+                    <td> @item.ReviewId</td>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.User1.Name</td>
+                    <td>@item.AddReview</td>
+                    <td>@item.Date</td>
+                </tr>
+            }
+        }
+        @*
+
+
+
+        *@
+
+    </table>
+</div>
+
+
+<div class="countainer">
+    <table method="GET" class="table">
+        <tr>
+            <th>Book id</th>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Type</th>
+            <th>Description</th>
+
+
+        </tr>
+
+        @{
+
+            foreach (var item in @Model.books)
+            {
+                <tr>
+
+                    <td> @item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.Author</td>
+                    <td>@item.Type</td>
+                    <td>@item.Description</td>
+
+                </tr>
+            }
+        }
+        @*
+
+
+
+        *@
+
+    </table>
+</div>

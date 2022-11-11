@@ -9,12 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DBlayer;
 
 namespace BookReviews
 {
     public partial class AdminControl : Form
     {
-        PeopleManager peopleManager = new PeopleManager();
+        static PersonDB personDB = new PersonDB();
+        PeopleManager peopleManager = new PeopleManager(personDB);
 
         List<Employee> EmployeesList = new List<Employee>();
 

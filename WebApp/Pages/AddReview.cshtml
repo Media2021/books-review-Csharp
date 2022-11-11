@@ -15,105 +15,97 @@
 </head>
 <body>
 
+    <header>
+
+
+       @* <a href="/EditMyReview">user edit own review</a>*@
+           <li><a asp-page="/EditMyReview">Edit my reviews</a></li>
+    </header>
+
     
-@if (User.FindFirst("id") != null)
-{
-    <p> Your user id is: @User.FindFirst("id").Value</p>
-  <p> Your name is @User.Identity.Name</p>
-}
+
 
         <div class="new-container1">
-            <form method="POST" id="my-form1">
-                <h1>Add review</h1>
+        <form method="POST" id="my-form1">
+            
+                <h1>Add review</h1>              
 
                 <div>
-                <input type="text" id="username " placeholder="@User.Identity.Name">
-               
                    
-                    <input  type="text" id="id " placeholder="@Model.book.Id"  >
-                   
+                
+                <input asp-for="reviewDTO.Id" type="text" value="@Model.book.Id" id="id" placeholder="@Model.book.Id">
+                <span asp-validation-for="reviewDTO.Id"></span>
 
                 </div>
                 <div>
 
-                <input  type="text" id="Name" placeholder="@Model.book.Title">
+              
+                <input asp-for="reviewDTO.Title" type="text" value="@Model.book.Title" id="Password" placeholder="@Model.book.Title">
+                <span asp-validation-for="reviewDTO.Title"></span>
                     
 
                 </div>
-
+                <div>
+                 
+                <input asp-for="reviewDTO.User1" type="text" value="@User.Identity.Name" id="username" placeholder="@User.Identity.Name">
+                <span asp-validation-for="reviewDTO.User1"></span>
+                </div>
                 <div>
                    
-                    <textarea asp-for="Review.AddReview" type="text" class="AddReview" placeholder="Your review"  > 
+                    <textarea asp-for="reviewDTO.AddReview" type="text" class="AddReview" placeholder="Your review"  > 
 
                     </textarea>
 
-                    <span asp-validation-for="Review.AddReview"></span>
+                    <span asp-validation-for="reviewDTO.AddReview"></span>
 
                 </div>
-                <div>
+               
+                <input class="btn1" type="submit" value="Add review"> 
 
-                   
-                    <input asp-for="Review.Date" type="date" name="Date" >
-                    <span asp-validation-for="Review.Date"></span>
-
-                </div>
-                <input class="btn1" type="submit" value="Delete review">
-
-                <input class="btn1" type="submit" value="Add review">
-            </form>
+        </form>
+         
 
             <p> @ViewData["Message"]</p>
             @section Scripts {
                 <partial name="_ValidationScriptsPartial" />
-}
+                              }
  
         </div>
-    
-
-    <div class="countainer">
-        <table method="GET"  class="table" >
-            <tr>
-                <th>Review id</th>
-                <th>Book Name</th>
-                <th>Review</th>
-                <th>Date</th>
 
 
-            </tr>
-          <tr>
-                <td><em>Thia Breazeall</em></td>
-                <td>tbreazll0@ihg.com</td>
-                <td>Female 94.134.53.83</td>
-                <td>Female 94.134.53.83</td>
+@*
+        <div class="countainer">
+            <table method="GET" class="table">
+                <tr>
+                    <th>Review id</th>
+                    <th>Book id</th>
+                    <th>Book Title</th>
+                    <th>User</th>
+                    <th>Review</th>
+                    <th>Date</th>
+                    <th>Delete/edit</th>
 
 
+                </tr>
+                @{
 
-            </tr>
-            <tr>
-                <td><em>Thia Breazeall</em></td>
-                <td>tbreazll0@ihg.com</td>
-                <td>Female 94.134.53.83</td>
-                <td>Female 94.134.53.83</td>
-
-            </tr>
-            <tr>
-                <td><em>Thia Breazeall</em></td>
-                <td>tbreazll0@ihg.com</td>
-                <td>Female 94.134.53.83</td>
-                <td>Female 94.134.53.83</td>
-
-            </tr>
-            <tr>
-                <td><em>Thia Breazeall</em></td>
-                <td>tbreazll0@ihg.com</td>
-                <td>Female 94.134.53.83</td>
-                <td>Female 94.134.53.83</td>
-
-            </tr>
+                foreach (var item in @Model.Reviews)
+                {
+                    <tr>
+                        
+                        <td> @item.ReviewId</td>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td>@item.User1.Name</td>
+                        <td>@item.AddReview</td>
+                        <td>@item.Date</td>
+                    </tr>
+                }
+            }
+           
 
         </table>
-    </div>
-
+    </div>*@
 
 </body>
 </html>

@@ -12,13 +12,13 @@ namespace WebApp.Pages
         BookManager bookManager = new BookManager();
 
         [BindProperty]
-        public Review? Review { get; set; }
-        [BindProperty]
+        public List< Review> Reviews { get; set; }
 
-        public List<Book>? books { get; set; }
+      
+
         public void OnGet()
         {
-            books = bookManager.GetBooks();
+            Reviews = bookManager.GetReviews();
 
         }
       

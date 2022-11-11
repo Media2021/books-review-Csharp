@@ -1,59 +1,76 @@
 using BookReviews;
 using BookReviews.classes;
+using DAO;
+using DBlayer;
+using LogicLayer.Mapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WebApp.DTO;
 
 namespace WebApp.Pages
 {
-        //[Authorize(Policy = "OnlyUserAccess")]
+      
     public class AddReviewModel : PageModel
     {
         BookManager bookManager = new BookManager();
-        PeopleManager peopleManager = new PeopleManager();  
+        //PeopleManager peopleManager = new PeopleManager();
+        static PersonDB personDB = new PersonDB();
+        PeopleManager peopleManager = new PeopleManager(personDB);
         [BindProperty]
-        public Review? Review { get; set; }
-       
+
+        public List<Review> Reviews { get; set; } 
+        [BindProperty]
+        public ReviewDTO reviewDTO { get; set; }
         [BindProperty]
         public string Id { get; set; }
         [BindProperty]
         public Book book { get; set; }
-        [BindProperty]
-
-        public string username { get; set; }
 
 
-        [BindProperty]
 
-        public User user { get; set; }
-       
-
-        public void OnGet(string Id,string username)
+        public void OnGet(string Id )
         {
-            List<Book> books=bookManager.GetBooks();
+            List<Book> books = bookManager.GetBooks();
             this.Id = Id;
             book = books.Find(x => x.Id == this.Id);
 
+            Reviews = bookManager.GetReviews();
 
-            user = (User)peopleManager.GetLoggedInUser(username);
-            this.username = username;
-            
+
 
         }
-       
 
-        public void OnPost()
+
+        public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
-            {
-                if (Review != null)
-                {
+            //if (ModelState.IsValid)
+            //{
+                //if (Review != null)
+                
+                    Person person = peopleManager.GetLoggedInUser(reviewDTO.User1);
 
-                    ViewData["Message"] = "Hello" + Review.Id + " Your review has been posted ";
-                    //bookManager.Addbook(new Book());
-                }
-            }
+
+                    Review review = new Review(reviewDTO.Id, reviewDTO.Title, (User)person, reviewDTO.AddReview, DateTime.Now);
+
+                    bookManager.AddReview(review);
+
+
+                    return Page();
+
+
+
+                    ViewData["Message"] = "Hello" + User.Identity.Name + " Your review has been created ";
+                
+            //}
+                return RedirectToPage("/MainHTML");
+        }
+        public IActionResult OnPostDelete()
+        {
+            
+
+            return RedirectToPage("/Error");
         }
     }
 }

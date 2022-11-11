@@ -9,37 +9,44 @@ namespace DAO
 {
     public class ReviewEntity
     {
-
-        private int id; //Id of the review
-        private string title;// 
+        private int reviewId;
+        private string  id; //Id of the book
+        private string title; 
+        private  UsercEntity users;
         private string addReview;
-        private  UsercEntity user;
         private DateTime date;
 
-        public ReviewEntity(int id, string title, string addReview, UsercEntity user, DateTime date)
+       
+
+        public ReviewEntity(int reviewId,string id, string title, UsercEntity users, string addReview,  DateTime date)
         {
+            this.reviewId = reviewId;
             this.id = id;
             this.title = title;
+            this.users = users;
             this.addReview = addReview;
-            this.user = user;
             this.date = date;
         }
 
-        public ReviewEntity(int getId, string getBookName, string getReview, string getUserName, string getDate)//?
+        public ReviewEntity( string getId, string getBookName,string getUserName ,string getReview, string getDate)//?
         {
         }
-
-        public int? Id { get { return id; } }
+        public ReviewEntity(int reviewId, string id, string title, UsercEntity user, string addReview)
+        {
+            date = DateTime.Now;
+        }
+        
+      
+        public int ReviewId { get { return reviewId; } }
+        public string? Id { get { return id; } }
        
         public string? Title { get { return title; } }
      
-
+       public  UsercEntity User { get { return users; } }//?
         public string? AddReview { get { return addReview; } }
-
-
-       public  UsercEntity User { get { return user; } }//?
      
+        public DateTime Date { get => date; set => date = value; }
 
-        public DateTime? Date { get { return date; } }
+        
     }
 }

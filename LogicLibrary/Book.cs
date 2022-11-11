@@ -39,7 +39,7 @@ namespace BookReviews.classes
 
         public string Description { get { return description; } }
 
-        public List<Review> Reviews { get => reviews; set => reviews = value; }
+        //public List<Review> Reviews { get => reviews; set => reviews = value; }
 
 
 

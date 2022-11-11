@@ -8,7 +8,7 @@
 
 <body>
 
-    <p>User page</p>
+   @* <p>User page</p>*@
     @if (User.FindFirst("id") != null)
     {
         <p> Your user id is: @User.FindFirst("id").Value</p>
@@ -18,25 +18,31 @@
     <div class="countainer">
         <table method="GET" class="table">
             <tr>
+                <th>Review id</th>
                 <th>Book id</th>
                 <th>Book Title</th>
-                <th>Author</th>
-                <th>Type</th>
-                <th>Description</th>
+                <th>User</th>
+                <th>Review</th>
+                <th>Date</th>
 
 
             </tr>
             @{
 
-                foreach (var item in @Model.books)
+                foreach (var item in @Model.Reviews)
                 {
                     <tr>
 
-                        <td> <em>@item.Id</em></td>
+                        
+                        <td> <a href="/EditReview?id=@item.ReviewId"><em>@item.ReviewId</em></a></td>
+
+                       
+
+                        <td>@item.Id</td>
                         <td>@item.Title</td>
-                        <td>@item.Author</td>
-                        <td>@item.Type</td>
-                        <td>@item.Description</td>
+                        <td>@item.User1.Name</td>
+                        <td>@item.AddReview</td>
+                        <td>@item.Date</td>
 
                     </tr>
                 }

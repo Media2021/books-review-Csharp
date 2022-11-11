@@ -1,0 +1,82 @@
+﻿@page
+@model WebApp.Pages.ApplyEditReviewModel
+    
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/review.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Add review</title>
+</head>
+<body>
+
+
+<div class="new-container1">
+    <form method="POST" id="my-form1">
+
+
+        <div>
+
+
+            <input asp-for="reviewDTO.ReviewId" type="text" value="@Model.reviewDTO.ReviewId" id="id" placeholder="@Model.reviewDTO.ReviewId" readonly>
+            <span asp-validation-for="reviewDTO.ReviewId"></span>
+
+        </div>
+        <div>
+
+
+            <input asp-for="reviewDTO.Id" type="text" value="@Model.reviewDTO.Id" id="Password" placeholder="@Model.reviewDTO.Id" readonly>
+            <span asp-validation-for="reviewDTO.Id"></span>
+
+
+        </div>
+        <div>
+
+
+            <input asp-for="reviewDTO.Title" type="text" value="@Model.reviewDTO.Title" id="Password" placeholder="@Model.reviewDTO.Title" readonly>
+            <span asp-validation-for="reviewDTO.Title"></span>
+
+
+        </div>
+        <div>
+
+            <input asp-for="reviewDTO.User1" type="text" value="@User.Identity.Name" id="username" placeholder="@User.Identity.Name" readonly>
+            <span asp-validation-for="reviewDTO.User1"></span>
+        </div>
+        <div>
+
+            <textarea asp-for="reviewDTO.AddReview" type="text" class="AddReview" placeholder="Your review"> 
+
+                    </textarea>
+
+            <span asp-validation-for="reviewDTO.AddReview"></span>
+
+        </div>
+        <div>
+
+
+            <input asp-for="reviewDTO.Date" type="date" name="Date" readonly>
+            <span asp-validation-for="reviewDTO.Date"></span>
+
+        </div>
+
+
+        <input class="btn1" type="submit" value="edit review">
+
+    </form>
+
+    <p> @ViewData["Message"]</p>
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+    </div>
+
+    </body>
+    </html>

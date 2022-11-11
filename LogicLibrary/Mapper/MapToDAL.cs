@@ -1,4 +1,5 @@
-﻿using BookReviews.classes;
+﻿using BookReviews;
+using BookReviews.classes;
 using DAO;
 using System;
 using System.Collections.Generic;
@@ -43,6 +44,13 @@ namespace LogicLayer.Mapper
             return new User(user.Id, user.Name, user.Password, user.ExpirationDate);
         }
 
-
+        public static ReviewEntity MapToReviewDAL(Review review)
+        {
+            return new ReviewEntity(review.ReviewId, review.Id, review.Title,MapToUserDAL(review.User1), review.AddReview, review.Date);
+        }
+        public static Review MapToReview(ReviewEntity review)
+        {
+            return new Review(review.ReviewId, review.Id, review.Title, MapToPeople.MapToUserDAL(review.User), review.AddReview, review.Date);
+        }
     }
 }
