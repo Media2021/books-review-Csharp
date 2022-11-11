@@ -23,8 +23,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUmV2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/ApplyEditReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwbHlFZGl0UmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/BooksCollection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NDb2xsZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/DeleteReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlUmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/EditMyReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdE15UmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/EditReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFJldmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/delsh/OneDrive/Desktop/Semester2Fontys/booksreviews/WebApp/Pages/Error.cshtml]
